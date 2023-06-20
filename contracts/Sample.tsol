@@ -2,7 +2,7 @@ pragma ever-solidity >= 0.62.0;
 pragma AbiHeader expire;
 pragma AbiHeader pubkey;
 
-// import "locklift/src/console.tsol";
+import "locklift/src/console.tsol";
 
 
 // SPDX-License-Identifier: MIT
@@ -165,7 +165,91 @@ contract Sample {
     //     return hash;
     // }
 
-    function _buildHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes _payload) private returns(uint) {
+
+    //     function _buildHashCell(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes _payload) private pure returns(uint) {
+
+    //     TvmCell payload = abi.encode(_payload);
+
+    //     TvmCell encodedCell = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, payload);
+
+    //     TvmSlice tmpSlice = encodedCell.toSlice();
+
+    //     uint hash = sha256(tmpSlice);
+
+    //     tmpSlice = tmpSlice.loadRefAsSlice();
+
+    //     uint16 cellDepth = tmpSlice.depth();
+
+    //     for (uint i = 0; i <= cellDepth; i++) {
+    //         TvmSlice refSlice = tmpSlice;
+
+    //         uint8 refs = tmpSlice.refs();
+
+    //         if (refs != 0) {
+    //             tmpSlice = refSlice.loadRefAsSlice();
+    //         }
+
+    //         hash = sha256(abi.encode(hash, sha256(refSlice)).toSlice());
+
+    //         console.log(format("i = {}, ref = {}, bits = {}, hash = {}", i, refs, b, sha256(refSlice)));
+    //     }
+
+    //     console.log(format("hash = {}", hash));
+    //     return hash;
+    // }
+
+
+    function _buildHashCell(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes _payload) private pure returns(uint) {
+
+        TvmCell p = abi.encode(_payload);
+
+        TvmCell encodedCell = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, p);
+
+        // TvmSlice encodedSlice = encodedCell.toSlice();
+        // uint hash = sha256(encodedSlice);
+
+        (uint64 srcChainId, uint64 dstChainId, uint srcAddress, uint dstAddress, bytes payload) = abi.decode(encodedCell, (uint64, uint64, uint, uint, bytes));
+        emit GetDecodedEvent(srcChainId, dstChainId, srcAddress, dstAddress, payload);
+
+        // uint i = cellDepth;
+
+        TvmSlice tmpSlice = encodedCell.toSlice();
+
+        // uint16 cellDepth = encodedCell.depth();
+        // emit GetInputEvent(encodedCell, cellDepth);
+        
+        uint hash = sha256(tmpSlice);
+
+        tmpSlice = tmpSlice.loadRefAsSlice();
+
+        uint16 cellDepth = tmpSlice.depth();
+        // emit GetInputEvent(encodedCell, cellDepth);
+
+        console.log(format("Ref depth = {}", cellDepth));
+
+        for (uint i = 0; i <= cellDepth; i++) {
+            TvmSlice refSlice = tmpSlice;
+
+            uint8 refs = tmpSlice.refs();
+
+            uint16 b = tmpSlice.bits();
+
+            if (refs != 0) {
+                tmpSlice = refSlice.loadRefAsSlice();
+            }
+
+            if (b > 0) {
+                hash = sha256(abi.encode(hash, sha256(refSlice)).toSlice());
+            }
+
+            console.log(format("i = {}, ref = {}, bits = {}, hash = {}", i, refs, b, sha256(refSlice)));
+        }
+
+        console.log(format("hash = {}", hash));
+        return hash;
+    }
+
+    function _buildHashBytes(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes _payload) private returns(uint) {
 
         TvmCell staticCell = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress);
 
@@ -260,7 +344,7 @@ contract Sample {
     
     function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes _payload) public {
         tvm.accept();
-        uint resultHash = _buildHash(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _payload);
+        uint resultHash = _buildHashCell(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _payload);
 
         emit GetHashEvent(resultHash);
     }
