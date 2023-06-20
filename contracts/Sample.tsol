@@ -151,22 +151,19 @@ contract Sample {
     event GetLengthEvent(uint _l);
 
 
-// 68656c6c6f2066726f6d20746f6e2d736f6c696469747920616e642070726f626c656d2077697468206861736820657374696d6174696f6e2c20697420686173206265656e20736f6c7665642f68656c6c6f2066726f6d20746f6e2d736f6c696469747920616e642070726f626c656d2077697468206861736820657374696d6174696f6e2c20697420686173206265656e20736f6c7665642f68656c6c6f2066726f6d20746f6e2d736f6c696469747920616e642070726f626c656d2077697468206861736820657374696d6174696f6e2c20697420686173206265656e20736f6c7665642f68656c6c6f2066726f6d20746f6e2d736f6c696469747
-// 920616e642070726f626c656d2077697468206861736820657374696d6174696f6e2c20697420686173206265656e20736f6c7665642f
+    // function bytesHash(bytes _data) internal pure returns(uint) {
+    //     uint length = _data.length;
+    //     uint8 chunkLength = 127;
+    //     uint hash;
+    //     for (uint i = 0; i < math.divc(length, chunkLength); i++) {
+    //         uint from = chunkLength * i;
+    //         uint to = from + chunkLength;
+    //         bytes chunk = _data[from:(to <= length ? to : length)];
+    //         hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
+    //     }
 
-    function bytesHash(bytes _data) internal pure returns(uint) {
-        uint length = _data.length;
-        uint8 chunkLength = 127;
-        uint hash;
-        for (uint i = 0; i < math.divc(length, chunkLength); i++) {
-            uint from = chunkLength * i;
-            uint to = from + chunkLength;
-            bytes chunk = _data[from:(to <= length ? to : length)];
-            hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
-        }
-
-        return hash;
-    }
+    //     return hash;
+    // }
 
     function _buildHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes _payload) private returns(uint) {
 
@@ -185,8 +182,6 @@ contract Sample {
                 bytes chunk = _payload[from:(to <= length ? to : length)];
                 hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
             }
-
-
 
             // hash = sha256(abi.encode(hash, bytesHash(bytes(_payload))).toSlice());
             // for (uint i = 0; i < math.divc(length, chunkLength); i++) {

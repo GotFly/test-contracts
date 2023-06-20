@@ -55,54 +55,97 @@ SENDRAWMSG
 ACCEPT
 .loc ../contracts/Sample.tsol, 0
 
-.globl	bytesHash_c0b4ad34_internal
-.type	bytesHash_c0b4ad34_internal, @function
-CALL $bytesHash_c0b4ad34_internal_macro$
+.globl	_buildHash_be439f6a_internal
+.type	_buildHash_be439f6a_internal, @function
+CALL $_buildHash_be439f6a_internal_macro$
 
-.macro bytesHash_c0b4ad34_internal_macro
-.loc ../contracts/Sample.tsol, 158
-DUP
+.macro _buildHash_be439f6a_internal_macro
+.loc ../contracts/Sample.tsol, 170
+REVERSE 5, 0
+NEWC
+STU 64
+STU 64
+STU 256
+STU 256
+ENDC
+.loc ../contracts/Sample.tsol, 172
+CTOS
+.loc ../contracts/Sample.tsol, 173
+SHA256U
+.loc ../contracts/Sample.tsol, 175
+OVER
 PUSHPOW2DEC 32
 CDATASIZE
 DROP
 NIP
 RSHIFT 3
-.loc ../contracts/Sample.tsol, 159
+.loc ../contracts/Sample.tsol, 176
 PUSHINT 127
-.loc ../contracts/Sample.tsol, 160
-PUSHINT 0
-DUP
-.loc ../contracts/Sample.tsol, 161
+.loc ../contracts/Sample.tsol, 178
+DUP2
+GREATER
 PUSHCONT {
-	PUSH3 S0, S3, S2
-	DIVC
-	LESS
+	.loc ../contracts/Sample.tsol, 179
+	PUSHINT 0
+	PUSHCONT {
+		PUSH3 S0, S2, S1
+		DIVC
+		LESS
+	}
+	PUSHCONT {
+		.loc ../contracts/Sample.tsol, 180
+		DUP2
+		MUL
+		.loc ../contracts/Sample.tsol, 181
+		PUSH2 S0, S2
+		ADD
+		.loc ../contracts/Sample.tsol, 182
+		PUSH S6
+		ROT
+		PUSH2 S2, S5
+		LEQ
+		PUSHCONT {
+			PUSH S2
+		}
+		PUSHCONT {
+			PUSH S5
+		}
+		IFELSE
+		FALSE
+		CALLREF {
+			CALL $bytes_substr$
+		}
+		.loc ../contracts/Sample.tsol, 183
+		CTOS
+		SHA256U
+		PUSH S5
+		NEWC
+		STU 256
+		STU 256
+		ENDC
+		CTOS
+		SHA256U
+		POP S5
+		.loc ../contracts/Sample.tsol, 0
+		DROP
+		.loc ../contracts/Sample.tsol, 179
+		INC
+		.loc ../contracts/Sample.tsol, 0
+	}
+	WHILE
+	DROP
 }
 PUSHCONT {
-	.loc ../contracts/Sample.tsol, 162
-	PUSH2 S2, S0
-	MUL
-	.loc ../contracts/Sample.tsol, 163
-	PUSH2 S0, S3
-	ADD
-	.loc ../contracts/Sample.tsol, 164
-	PUSH S6
-	ROT
-	PUSH2 S2, S6
-	LEQ
-	PUSHCONT {
-		PUSH S2
-	}
-	PUSHCONT {
-		PUSH S6
-	}
-	IFELSE
-	FALSE
-	CALLREF {
-		CALL $bytes_substr$
-	}
-	.loc ../contracts/Sample.tsol, 165
+	.loc ../contracts/Sample.tsol, 186
+	PUSH S3
+	NEWC
+	STREF
+	ENDC
 	CTOS
+	.loc ../contracts/Sample.tsol, 187
+	LDREFRTOS
+	NIP
+	.loc ../contracts/Sample.tsol, 188
 	SHA256U
 	PUSH S3
 	NEWC
@@ -112,47 +155,11 @@ PUSHCONT {
 	CTOS
 	SHA256U
 	POP S3
-	.loc ../contracts/Sample.tsol, 0
-	DROP
-	.loc ../contracts/Sample.tsol, 161
-	INC
-	.loc ../contracts/Sample.tsol, 0
 }
-WHILE
-DROP
-.loc ../contracts/Sample.tsol, 168
-BLKDROP2 3, 1
-.loc ../contracts/Sample.tsol, 0
-
-.globl	_buildHash_f9ff64d3_internal
-.type	_buildHash_f9ff64d3_internal, @function
-CALL $_buildHash_f9ff64d3_internal_macro$
-
-.macro _buildHash_f9ff64d3_internal_macro
-.loc ../contracts/Sample.tsol, 173
-REVERSE 5, 0
-NEWC
-STU 64
-STU 64
-STU 256
-STU 256
-ENDC
-.loc ../contracts/Sample.tsol, 175
-CTOS
-.loc ../contracts/Sample.tsol, 176
-SHA256U
-.loc ../contracts/Sample.tsol, 187
-SWAP
-CALLREF {
-	CALL $bytesHash_c0b4ad34_internal_macro$
-}
-SWAP
-NEWC
-STU 256
-STU 256
-ENDC
-CTOS
-SHA256U
+IFELSE
+.loc ../contracts/Sample.tsol, 191
+DROP2
+NIP
 .loc ../contracts/Sample.tsol, 0
 
 .macro getHash
@@ -164,7 +171,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/Sample.tsol, 263
+.loc ../contracts/Sample.tsol, 227
 OVER
 PUSHCONT {
 	LDU 64
@@ -183,7 +190,7 @@ LDREF
 ENDS
 .loc ../contracts/Sample.tsol, 0
 CALLREF {
-	CALL $getHash_d90a819b_internal_macro$
+	CALL $getHash_e1fb4b58_internal_macro$
 }
 DROP
 CALLREF {
@@ -191,16 +198,18 @@ CALLREF {
 }
 THROW 0
 
-.globl	getHash_d90a819b_internal
-.type	getHash_d90a819b_internal, @function
-CALL $getHash_d90a819b_internal_macro$
+.globl	getHash_e1fb4b58_internal
+.type	getHash_e1fb4b58_internal, @function
+CALL $getHash_e1fb4b58_internal_macro$
 
-.macro getHash_d90a819b_internal_macro
-.loc ../contracts/Sample.tsol, 264
+.macro getHash_e1fb4b58_internal_macro
+.loc ../contracts/Sample.tsol, 228
+ACCEPT
+.loc ../contracts/Sample.tsol, 229
 CALLREF {
-	CALL $_buildHash_f9ff64d3_internal_macro$
+	CALL $_buildHash_be439f6a_internal_macro$
 }
-.loc ../contracts/Sample.tsol, 266
+.loc ../contracts/Sample.tsol, 230
 PUSHSLICE xc00000000000000000000000005c6188eb
 NEWC
 STSLICE
@@ -208,8 +217,6 @@ STU 256
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/Sample.tsol, 267
-ACCEPT
 .loc ../contracts/Sample.tsol, 0
 
 .macro c4_to_c7
@@ -359,7 +366,7 @@ THROW 60
 
 .macro public_function_selector
 DUP
-PUSHINT 1220384329
+PUSHINT 620836216
 EQUAL
 IFJMPREF {
 	CALL $getHash$
