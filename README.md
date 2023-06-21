@@ -1,0 +1,134 @@
+# EVM
+
+abi.encode(_chainId, _nonce); // 1,1
+"0x00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001"
+
+
+BYTES
+
+bytes32 result = sha256(abi.encode(_input));
+
+0x00 - 0x3114257a7b9c2d0a3011699501217162844826cdd2e9fefa65f3500d3200e118
+0xea - 0x677ef50e425e67a7eeb1f4bb8b5034ab2e80f497d4a0f8502a51d533da8e101b
+
+bytes32 result = sha256(_input);
+
+0x00 - 0x6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d
+0xea - 0x3ad4e44a4306fb62b2df0ab7069c67b9a0f8c8eff9f1cba8e7f851199df720c9
+
+
+UINT
+
+bytes memory a = abi.encodePacked(_input);
+bytes32 result = sha256(a);
+
+0x0000000000000000000000000000000000000000000000000000000000000000
+0 - 0x66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925
+
+0xae                         - 0x19753a9b7681b36104c1f79dfc8a6a1eccc088b8c7d2903a446d81694d2fb3a9
+0x00                         - 0x6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d
+0x49206861766520313030e282ac - 0xe947c77d600ac291fe0cfe74aa11f36a8c9879123b207bbeb86ea63adf4c9302
+
+
+1
+1
+0x71C7656EC7ab88b098defB751B7401B5f6d8976F
+0x71C7656EC7ab88b098defB751B7401B5f6d8976F
+0x49206861766520313030e282ac
+hash - 0x0be1c30bf67044ab71909afababff3f812e102768e8c90b90e90a3c70284c035
+
+
+68656c6c6f2066726f6d20746f6e2d736f6c696469747920616e642070726f626c656d2077697468206861736820657374696d6174696f6e2c20697420686173206265656e20736f6c7665642f68656c6c6f2066726f6d20746f6e2d736f6c696469747920616e642070726f626c656d2077697468206861736820657374696d6174696f6e2c20697420686173206265656e20736f6c7665642f
+
+0xae
+hash - 0x29675a9a88257b1187b8c23dab7b2163414aaeb290b623c1815ca2b46eef49bd
+
+
+0xd6cd42ba1a4ccf0de85dbc484f2755362e80399c1f31641ce387cc51838cc86a
+
+# TVM
+
+everdev sol compile Sample.tsol && \
+
+everdev c i Sample && \
+
+everdev contract deploy -v 10000000000 Sample && \
+
+everdev c run Sample
+
+TvmCell
+has_idx 1bit, hash_crc32 1bit,  has_cache_bits 1bit, flags 2bit, size_bytes 3 bit
+
+
+https://github.com/tonlabs/TON-Solidity-Compiler/blob/master/API.md#bytes
+
+Converts bytes to TvmSlice. Warning: if length of the array is greater than 127 then extra bytes are stored in the first reference of the slice. Use <TvmSlice>.loadRef() to load that extra bytes.
+
+
+0x00 - 0x6c64b3153333f7af728149b88cd7b27f5ded7cd17ac88893ee47fc208a15e640
+0xea - 0x6c64b3153333f7af728149b88cd7b27f5ded7cd17ac88893ee47fc208a15e640
+
+
+uint result = sha256(_input);
+
+00 - 0x6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d
+ea - 0x3ad4e44a4306fb62b2df0ab7069c67b9a0f8c8eff9f1cba8e7f851199df720c9
+
+
+uint result = tvm.hash(_input);
+
+00 - 0xdbbc7025e89eb9b1ec9e8e2c7a2db6869dbb50fba21bf374c86529dc311cede9
+ea - 0x55e05fa080823b342effcfd33271bb01c8f08a9faef40c46d7225865337f3c00
+
+
+uint result = sha256(abi.encode(_input).toSlice());
+
+00 - 0xe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+ae - 0xe3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+
+UINT
+encoded for Ae - te6ccgEBAgEABgABAAEAAgA=
+
+te6ccgEBAQEAIgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+0 - 0x66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925
+
+abi.encode
+
+0xae - "te6ccgEBAgEABgABAAEAAq4="
+0x49206861766520313030e282ac - "te6ccgEBAgEAEgABAAEAGkkgaGF2ZSAxMDDigqw="
+
+bytes test = hex"00";
+
+uint result = sha256(test);
+
+00 - 0x6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d
+
+
+TvmSlice test = abi.encode(hex"ae").toSlice();
+
+uint result = sha256(test.loadRefAsSlice());
+
+0x19753a9b7681b36104c1f79dfc8a6a1eccc088b8c7d2903a446d81694d2fb3a9
+
+
+49206861766520313030e282ac - 0xe947c77d600ac291fe0cfe74aa11f36a8c9879123b207bbeb86ea63adf4c9302
+
+
+1
+1
+0x71C7656EC7ab88b098defB751B7401B5f6d8976F
+0x71C7656EC7ab88b098defB751B7401B5f6d8976F
+0x49206861766520313030e282ac
+packed - te6ccgEBAgEAYgABoAAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAAAABxx2Vux6uIsJje+3UbdAG19tiXbwAAAAAAAAAAAAAAAHHHZW7Hq4iwmN77dRt0AbX22JdvAQAaSSBoYXZlIDEwMOKCrA==
+hash - 0xe947c77d600ac291fe0cfe74aa11f36a8c9879123b207bbeb86ea63adf4c9302
+
+
+
+
+012345
+123456
+
+0-2
+
+
+
