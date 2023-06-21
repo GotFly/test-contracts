@@ -199,6 +199,12 @@ contract Sample {
     // }
 
 
+    function _buildIntermediateHash(TvmCell _cell, uint _hash) private pure returns(uint)
+    {
+
+    }
+
+
     function _buildHashCell(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes _payload) private pure returns(uint) {
 
         TvmCell p = abi.encode(_payload);
@@ -225,7 +231,7 @@ contract Sample {
         uint16 cellDepth = tmpSlice.depth();
         // emit GetInputEvent(encodedCell, cellDepth);
 
-        console.log(format("Ref depth = {}", cellDepth));
+        // console.log(format("Ref depth = {}", cellDepth));
 
         for (uint i = 0; i <= cellDepth; i++) {
             TvmSlice refSlice = tmpSlice;
@@ -240,9 +246,10 @@ contract Sample {
 
             if (b > 0) {
                 hash = sha256(abi.encode(hash, sha256(refSlice)).toSlice());
+                console.log(format("i = {}, ref = {}, bits = {}, hash = {}", i, refs, b, sha256(refSlice)));
             }
 
-            console.log(format("i = {}, ref = {}, bits = {}, hash = {}", i, refs, b, sha256(refSlice)));
+            // console.log(format("i = {}, ref = {}, bits = {}, hash = {}", i, refs, b, sha256(refSlice)));
         }
 
         console.log(format("hash = {}", hash));

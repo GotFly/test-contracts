@@ -1,70 +1,77 @@
-// EVM
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
 
-function _buildHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes memory _payload) private returns(bytes32) {
-    bytes memory staticPacked = abi.encodePacked(_srcChainId, _dstChainId, _srcAddress, _dstAddress);
+contract TestContract {
+    constructor() {}
 
-    uint length = _payload.length;
-    uint8 chunkLength = 127;
+    // function bytesHash(bytes memory _data) public pure returns (bytes memory b) {
+    //     // bytes memory test = abi.encode(_data);
+    //     // return test;
+    //     b = new bytes(32);
+    //     assembly { mstore(add(b, 32), _data) }
+    // }
 
-    bytes32 hash = sha256(staticPacked);
+    // event GetHashEvent(bytes32 _value);
+    event GetTestEvent(uint _i, uint _length,bytes _value, bytes32 _hash);
+    event GetInputEvent(bytes _value);
+    event GetHashEvent(bytes32 _hash);
+    // event GetHashEvent(bytes32 _value);
 
-    if (length > chunkLength) {
+    // function getHash(bytes memory _input) public {
 
-        for (uint i = 0; i <= length / chunkLength; i++) {
-            uint from = chunkLength * i;
-            uint to = from + chunkLength <= length ? from + chunkLength : length;
-            bytes memory chunk = new bytes(to - from);
-            for(uint j = from; j < to; j++){
-                chunk[j - from] = bytes(_payload)[j];
+    //     // bytes32 a = bytes32(_input[:32]);
+
+    //     bytes memory a = abi.encodePacked(_input);
+    //     bytes32 result = sha256(a);
+    //     // bytes32 result = sha256(_input);
+
+    //     // bytes memory result2 = abi.encode(_chainId, _nonce);
+    //     emit GetInputEvent(a);
+
+    //     emit GetHashEvent(result);
+    // }
+
+
+   function _buildHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes memory _payload) private returns(bytes32) {
+        bytes memory staticPacked = abi.encodePacked(_srcChainId, _dstChainId, _srcAddress, _dstAddress);
+
+        uint length = _payload.length;
+        uint8 chunkLength = 127;
+
+        bytes32 hash = sha256(staticPacked);
+
+        bytes memory t  = new bytes(127);
+        bytes32 t2;
+
+        // if (length > chunkLength) {
+
+            for (uint i = 0; i <= length / chunkLength; i++) {
+                uint from = chunkLength * i;
+                uint to = from + chunkLength <= length ? from + chunkLength : length;
+                bytes memory chunk = new bytes(to - from);
+                for(uint j = from; j < to; j++){
+                    chunk[j - from] = bytes(_payload)[j];
+                }
+                emit GetInputEvent(chunk);
+                // bytes memory dynamicPacked = abi.encodePacked(chunk);
+                hash = sha256(abi.encode(hash, sha256(chunk)));
+
+                t = chunk;
+                t2 = sha256(chunk);
+                emit GetTestEvent(i, to - from, t, t2);
             }
-            bytes memory dynamicPacked = abi.encodePacked(chunk);
-            hash = sha256(abi.encode(hash, sha256(dynamicPacked)));
-        }
 
-    } else {
-        bytes memory dynamicPacked = abi.encodePacked(_payload);
-        hash = sha256(abi.encode(hash, sha256(dynamicPacked)));
+        // } else {
+        //     // bytes memory dynamicPacked = abi.encodePacked(_payload);
+        //     hash = sha256(abi.encode(hash, sha256(_payload)));
+        // }
+
+        return hash;
+
     }
 
-    return hash;
-
-}
-
-function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes memory _payload) public {
-    emit GetHashEvent(_buildHash(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _payload));
-}
-
-
-// TVM
-function _buildHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes _payload) private returns(uint) {
-
-    TvmCell staticCell = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress);
-
-    TvmSlice staticSlice = staticCell.toSlice();
-    uint hash = sha256(staticSlice);
-
-    uint length = _payload.length;
-    uint chunkLength = 127;
-
-    if (length > chunkLength) {
-        for (uint i = 0; i < math.divc(length, chunkLength); i++) {
-            uint from = chunkLength * i;
-            uint to = from + chunkLength;
-            bytes chunk = _payload[from:(to <= length ? to : length)];
-            hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
-        }
-    } else {
-        TvmSlice dynamicCell = abi.encode(_payload).toSlice();
-        TvmSlice dynamicSlice = dynamicCell.loadRefAsSlice();
-        hash = sha256(abi.encode(hash, sha256(dynamicSlice)).toSlice());
+    function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes memory _payload) public {
+        emit GetHashEvent(_buildHash(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _payload));
     }
 
-    return hash;
-}
-
-function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, bytes _payload) public pure {
-    uint resultHash = _buildHash(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _payload);
-
-    emit GetHashEvent(resultHash);
-    tvm.accept();
 }
