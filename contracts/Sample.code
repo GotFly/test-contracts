@@ -1,0 +1,578 @@
+.version sol 0.70.0
+
+.macro constructor
+DROP
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+GETGLOB 6
+THROWIF 51
+ENDS
+ACCEPT
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	_buildHashCell_5b098628_internal
+.type	_buildHashCell_5b098628_internal, @function
+CALL $_buildHashCell_5b098628_internal_macro$
+
+.macro _buildHashCell_5b098628_internal_macro
+.loc Sample.sol, 23
+CTOS
+NEWC
+STSLICE
+ENDC
+REVERSE 5, 0
+NEWC
+STU 64
+STU 64
+STU 256
+STU 256
+STREF
+ENDC
+.loc Sample.sol, 25
+CTOS
+.loc Sample.sol, 27
+DUP
+SHA256U
+.loc Sample.sol, 29
+SWAP
+LDREFRTOS
+NIP
+.loc Sample.sol, 31
+DUP
+SDEPTH
+.loc Sample.sol, 32
+DUP
+PUSHSLICE xc000000000000000000000000031b37558
+NEWC
+STSLICE
+STU 256
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc Sample.sol, 34
+OVER
+NEWC
+STSLICE
+ENDC
+PUSHREF {
+	.blob x5061796c6f61642066726f6d20726566
+}
+PUSHSLICE xc00000000000000000000000002d38ee6e
+NEWC
+STSLICE
+STREF
+STREF
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc Sample.sol, 36
+PUSHREF {
+	.blob x
+}
+.loc Sample.sol, 38
+PUSHINT 0
+DUP
+.loc Sample.sol, 40
+PUSHCONT {
+	PUSH2 S0, S3
+	LEQ
+}
+PUSHCONT {
+	.loc Sample.sol, 42
+	PUSH S4
+	SREFS
+	.loc Sample.sol, 43
+	PUSH S5
+	SBITS
+	.loc Sample.sol, 45
+	DUP
+	GTINT 0
+	PUSHCONT {
+		.loc Sample.sol, 47
+		PUSH S4
+		PUSHPOW2DEC 32
+		CDATASIZE
+		DROP
+		NIP
+		RSHIFT 3
+		EQINT 0
+		PUSH S4
+		EQINT 0
+		AND
+		PUSHCONT {
+			.loc Sample.sol, 48
+			PUSH S6
+			NEWC
+			STSLICE
+			ENDC
+			PUSHINT 0
+			PUSH S2
+			RSHIFT 3
+			FALSE
+			CALLREF {
+				CALL $bytes_substr_macro$
+			}
+			POP S5
+			.loc Sample.sol, 49
+			PUSH S4
+			PUSHPOW2DEC 32
+			CDATASIZE
+			DROP
+			NIP
+			RSHIFT 3
+			DEC
+			UFITS 256
+			POP S4
+		}
+		PUSHCONT {
+			PUSH S4
+			PUSHPOW2DEC 32
+			CDATASIZE
+			DROP
+			NIP
+			RSHIFT 3
+			GTINT 0
+			DUP
+			PUSHCONT {
+				DROP
+				PUSH S4
+				PUSHPOW2DEC 32
+				CDATASIZE
+				DROP
+				NIP
+				RSHIFT 3
+				LESSINT 127
+			}
+			IF
+			PUSHCONT {
+				.loc Sample.sol, 51
+				PUSH S3
+				NEQINT 0
+				DUP
+				PUSHCONT {
+					DROP
+					DUP
+					RSHIFT 3
+					PUSH S4
+					GEQ
+				}
+				IF
+				PUSHCONT {
+					.loc Sample.sol, 52
+					PUSH2 S4, S6
+					NEWC
+					STSLICE
+					ENDC
+					PUSHINT 0
+					PUSH S6
+					FALSE
+					CALLREF {
+						CALL $bytes_substr_macro$
+					}
+					CALLREF {
+						CALL $concatenateStrings_macro$
+					}
+					POP S5
+					.loc Sample.sol, 0
+				}
+				IF
+				.loc Sample.sol, 54
+				PUSH S3
+				NEQINT 0
+				DUP
+				PUSHCONT {
+					DROP
+					DUP
+					RSHIFT 3
+					PUSH S4
+					LESS
+				}
+				IF
+				PUSHCONT {
+					.loc Sample.sol, 55
+					PUSH2 S4, S6
+					NEWC
+					STSLICE
+					ENDC
+					PUSHINT 0
+					PUSH S3
+					RSHIFT 3
+					FALSE
+					CALLREF {
+						CALL $bytes_substr_macro$
+					}
+					CALLREF {
+						CALL $concatenateStrings_macro$
+					}
+					POP S5
+					.loc Sample.sol, 0
+				}
+				IF
+				.loc Sample.sol, 0
+			}
+			IF
+		}
+		IFELSE
+		.loc Sample.sol, 59
+		PUSH2 S4, S0
+		PUSHSLICE xc00000000000000000000000000ce25705
+		NEWC
+		STSLICE
+		STU 256
+		STREF
+		ENDC
+		PUSHINT 0
+		SENDRAWMSG
+		.loc Sample.sol, 60
+		PUSH S4
+		PUSHPOW2DEC 32
+		CDATASIZE
+		DROP
+		NIP
+		RSHIFT 3
+		EQINT 127
+		PUSHCONT {
+			.loc Sample.sol, 61
+			PUSH S4
+			CTOS
+			SHA256U
+			PUSH S8
+			NEWC
+			STU 256
+			STU 256
+			ENDC
+			CTOS
+			SHA256U
+			POP S8
+			.loc Sample.sol, 62
+			PUSH S4
+			CTOS
+			SHA256U
+			PUSH2 S5, S3
+			PUSHSLICE xc00000000000000000000000002d2f45cf
+			NEWC
+			STSLICE
+			STU 256
+			STREF
+			STU 256
+			ENDC
+			PUSHINT 0
+			SENDRAWMSG
+			.loc Sample.sol, 63
+			PUSHREF {
+				.blob x
+			}
+			POP S5
+			.loc Sample.sol, 64
+			PUSH2 S4, S6
+			NEWC
+			STSLICE
+			ENDC
+			PUSH2 S5, S2
+			RSHIFT 3
+			FALSE
+			CALLREF {
+				CALL $bytes_substr_macro$
+			}
+			CALLREF {
+				CALL $concatenateStrings_macro$
+			}
+			POP S5
+			.loc Sample.sol, 65
+			PUSH S4
+			PUSHPOW2DEC 32
+			CDATASIZE
+			DROP
+			NIP
+			RSHIFT 3
+			DEC
+			UFITS 256
+			POP S4
+			.loc Sample.sol, 0
+		}
+		IF
+		.loc Sample.sol, 68
+		PUSH2 S2, S5
+		EQUAL
+		PUSHCONT {
+			.loc Sample.sol, 69
+			PUSH S4
+			CTOS
+			SHA256U
+			PUSH S8
+			NEWC
+			STU 256
+			STU 256
+			ENDC
+			CTOS
+			SHA256U
+			POP S8
+			.loc Sample.sol, 70
+			PUSH S4
+			CTOS
+			SHA256U
+			PUSH2 S5, S3
+			PUSHSLICE xc00000000000000000000000002d2f45cf
+			NEWC
+			STSLICE
+			STU 256
+			STREF
+			STU 256
+			ENDC
+			PUSHINT 0
+			SENDRAWMSG
+			.loc Sample.sol, 0
+		}
+		IF
+		.loc Sample.sol, 0
+	}
+	IF
+	.loc Sample.sol, 74
+	DROP
+	PUSHCONT {
+		.loc Sample.sol, 75
+		PUSH S4
+		LDREFRTOS
+		NIP
+		POP S5
+		.loc Sample.sol, 0
+	}
+	IF
+	.loc Sample.sol, 40
+	INC
+	.loc Sample.sol, 0
+}
+WHILE
+BLKDROP 5
+.loc Sample.sol, 0
+
+.macro getHash
+DROP
+GETGLOB 6
+THROWIFNOT 76
+.loc Sample.sol, 142
+OVER
+PUSHCONT {
+	LDREF
+	ENDS
+	CTOS
+}
+IF
+LDU 64
+LDU 64
+LDU 256
+LDU 256
+LDU 256
+LDREF
+ENDS
+CTOS
+LDU 256
+LDREF
+ENDS
+.loc Sample.sol, 0
+CALLREF {
+	CALL $getHash_708bbdde_internal_macro$
+}
+IFREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	getHash_708bbdde_internal
+.type	getHash_708bbdde_internal, @function
+CALL $getHash_708bbdde_internal_macro$
+
+.macro getHash_708bbdde_internal_macro
+.loc Sample.sol, 143
+ACCEPT
+.loc Sample.sol, 144
+XCHG S2
+NEWC
+STU 256
+STU 256
+STREF
+ENDC
+.loc Sample.sol, 145
+CALLREF {
+	CALL $_buildHashCell_5b098628_internal_macro$
+}
+.loc Sample.sol, 147
+PUSHSLICE xc00000000000000000000000005c6188eb
+NEWC
+STSLICE
+STU 256
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc Sample.sol, 0
+
+.macro c4_to_c7
+PUSHROOT
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+ENDS
+SETGLOB 3
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS
+SBITS
+GTINT 1
+PUSHCONT {
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+}
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSH S2
+CTOS
+PLDU 4
+MODPOW2 1
+IFRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+THROWIFNOT 60
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+OVER
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHPOW2 9
+	LDSLICEX
+	DUP
+	MYADDR
+	NEWC
+	STSLICE
+	STSLICE
+	ENDC
+	HASHCU
+	SWAP
+	LDU 1 ; signatureSlice hashMsgSlice hasPubkey msgSlice
+	SWAP
+	PUSHCONT {
+		LDU 256 ; signatureSlice hashMsgSlice pubkey msgSlice
+		XCHG S3
+		SWAP
+	}
+	PUSHCONT {
+		XCHG S2
+		GETGLOB 2
+	}
+	IFELSE
+	CHKSIGNU
+	THROWIFNOT 40
+}
+PUSHCONT {
+	LDU 1 ; hasPubkey msgSlice
+	SWAP
+	THROWIF 58
+}
+IFELSE
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; expireAt msgSlice
+SWAP
+NOW ; msgSlice expireAt now
+GREATER ; msgSlice expireAt>now
+THROWIFNOT 57
+LDU 32 ; funcId body
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.macro public_function_selector
+DUP
+PUSHINT 1096897438
+EQUAL
+IFJMPREF {
+	CALL $getHash$
+}
+DUP
+PUSHINT 1756716863
+EQUAL
+IFJMPREF {
+	CALL $constructor$
+}
+

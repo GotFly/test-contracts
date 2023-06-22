@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "build": "npx locklift build ",
-    "test": "npx locklift test --network local"
+    "test": "npx locklift test --network local",
+    "deploy": "everdev c i Sample && everdev contract deploy -v 10000000000 Sample && everdev c run Sample",
+    "run": "everdev c run Sample"
   },
   "author": "",
   "license": "ISC",

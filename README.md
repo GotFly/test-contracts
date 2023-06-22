@@ -48,7 +48,7 @@ hash - 0x29675a9a88257b1187b8c23dab7b2163414aaeb290b623c1815ca2b46eef49bd
 
 # TVM
 
-everdev sol compile Sample.tsol && \
+everdev sol compile Sample.sol && \
 
 everdev c i Sample && \
 

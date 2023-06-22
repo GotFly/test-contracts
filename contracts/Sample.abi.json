@@ -4,21 +4,15 @@
 	"header": ["pubkey", "time", "expire"],
 	"functions": [
 		{
-			"name": "testFunc",
-			"inputs": [
-				{"name":"_input","type":"bytes"}
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "getHash",
 			"inputs": [
 				{"name":"_srcChainId","type":"uint64"},
 				{"name":"_dstChainId","type":"uint64"},
 				{"name":"_srcAddress","type":"uint256"},
 				{"name":"_dstAddress","type":"uint256"},
-				{"name":"_payload","type":"bytes"}
+				{"name":"_param1","type":"uint256"},
+				{"name":"_param2","type":"uint256"},
+				{"name":"_param3","type":"string"}
 			],
 			"outputs": [
 			]
@@ -34,15 +28,6 @@
 	"data": [
 	],
 	"events": [
-		{
-			"name": "GetInputEvent",
-			"inputs": [
-				{"name":"_cell","type":"cell"},
-				{"name":"_depth","type":"uint16"}
-			],
-			"outputs": [
-			]
-		},
 		{
 			"name": "GetHashEvent",
 			"inputs": [
@@ -66,7 +51,18 @@
 		{
 			"name": "GetTestEvent",
 			"inputs": [
+				{"name":"_mark","type":"string"},
 				{"name":"_b","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "GetStepEvent",
+			"inputs": [
+				{"name":"_i","type":"uint256"},
+				{"name":"_chunk","type":"bytes"},
+				{"name":"_hash","type":"uint256"}
 			],
 			"outputs": [
 			]
@@ -75,6 +71,15 @@
 			"name": "GetLengthEvent",
 			"inputs": [
 				{"name":"_l","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "GetChunkEvent",
+			"inputs": [
+				{"name":"_bits","type":"uint256"},
+				{"name":"_chunk","type":"bytes"}
 			],
 			"outputs": [
 			]
