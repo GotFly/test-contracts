@@ -47,42 +47,6 @@
 			],
 			"outputs": [
 			]
-		},
-		{
-			"name": "GetTestEvent",
-			"inputs": [
-				{"name":"_mark","type":"string"},
-				{"name":"_b","type":"bytes"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "GetStepEvent",
-			"inputs": [
-				{"name":"_i","type":"uint256"},
-				{"name":"_chunk","type":"bytes"},
-				{"name":"_hash","type":"uint256"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "GetLengthEvent",
-			"inputs": [
-				{"name":"_l","type":"uint256"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "GetChunkEvent",
-			"inputs": [
-				{"name":"_bits","type":"uint256"},
-				{"name":"_chunk","type":"bytes"}
-			],
-			"outputs": [
-			]
 		}
 	],
 	"fields": [
