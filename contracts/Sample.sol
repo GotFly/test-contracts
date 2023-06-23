@@ -42,13 +42,59 @@ contract Sample {
 
         bytes chunk = "";
 
-        // uint padding = 0;
+        uint padding = 0;
 
         for (uint i = 0; i <= payloadDepth; i++) {   
 
             uint8 r = payloadSlice.refs();
-            uint16 d = payloadSlice.depth();
+            // uint16 d = payloadSlice.depth();
             uint16 b = payloadSlice.bits();
+
+            // Main tree
+            if (b > 0) {
+                // var 1
+                // for (uint j = 0; j < b / 8; j++) {
+                //     if (chunk.length + 1 < 127) {
+                //         chunk.append(bytes(bytes(payloadSlice)[j]));
+                //     } else if (chunk.length + 1 == 127) {
+                //         hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
+                //         emit GetStepEvent(i, chunk, sha256(chunk));
+                //         chunk = "";
+                //         chunk.append(bytes(bytes(payloadSlice)[j]));
+                //     }
+                // }
+                
+                // emit GetRefsEvent(i, r, d, b);
+                // emit GetTestEvent("Slice", i, bytes(payloadSlice));
+                // emit GetTestEvent("Chunk", i, chunk);
+
+                // var 2
+                if (chunk.length == 0 && padding == 0) {
+                    chunk = bytes(payloadSlice)[0:b / 8];
+                    padding = chunk.length - 1;
+                } else if (chunk.length > 0 && chunk.length < 127) {
+                    if (padding != 0  && b / 8 >= padding) {
+                        chunk.append(bytes(payloadSlice)[0:padding]);
+                    }
+                    if (padding != 0  && b / 8 < padding) {
+                        chunk.append(bytes(payloadSlice)[0:b / 8]);
+                    } 
+                }
+
+                // emit GetChunkEvent(b, chunk);
+                if (chunk.length == 127) {
+                    hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
+                    emit GetStepEvent(i, chunk, sha256(chunk));
+                    chunk = "";
+                    chunk.append(bytes(payloadSlice)[padding:b / 8]);
+                    padding = chunk.length - 1;
+                }
+
+                if (i == payloadDepth) {
+                    hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
+                    emit GetStepEvent(i, chunk, sha256(chunk));
+                }
+            }
 
             // Nested refs
             // if (r > 1) {
@@ -69,56 +115,8 @@ contract Sample {
             //         }
             //     }
             // }
-
-            // Main tree
-            if (b > 0) {
-
-                for (uint j = 0; j < b / 8; j++) {
-                    if (chunk.length + 1 < 127) {
-                        chunk.append(bytes(bytes(payloadSlice)[j]));
-                    } else if (chunk.length + 1 == 127) {
-                        hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
-                        emit GetStepEvent(i, chunk, sha256(chunk));
-                        chunk = "";
-                        chunk.append(bytes(bytes(payloadSlice)[j]));
-                    }
-                }
-                
-                emit GetRefsEvent(i, r, d, b);
-                emit GetTestEvent("Slice", i, bytes(payloadSlice));
-                emit GetTestEvent("Chunk", i, chunk);
-
-                
-                // emit GetTestEvent("Tree", bytes(payloadSlice));
-
-                // if (chunk.length == 0 && padding == 0) {
-                //     chunk = bytes(payloadSlice)[0:b / 8];
-                //     padding = chunk.length - 1;
-                // } else if (chunk.length > 0 && chunk.length < 127) {
-                //     if (padding != 0  && b / 8 >= padding) {
-                //         chunk.append(bytes(payloadSlice)[0:padding]);
-                //     }
-                //     if (padding != 0  && b / 8 < padding) {
-                //         chunk.append(bytes(payloadSlice)[0:b / 8]);
-                //     } 
-                // }
-
-                // emit GetChunkEvent(b, chunk);
-                // if (chunk.length == 127) {
-                //     hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
-                //     emit GetStepEvent(i, chunk, sha256(chunk));
-                //     chunk = "";
-                //     chunk.append(bytes(payloadSlice)[padding:b / 8]);
-                //     padding = chunk.length - 1;
-                // }
-
-                if (i == payloadDepth) {
-                    hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
-                    emit GetStepEvent(i, chunk, sha256(chunk));
-                }
-            }
             
-             if (r > 0 && r <= 1) {
+             if (r > 0) {
                 payloadSlice = payloadSlice.loadRefAsSlice();
              }
         }
