@@ -1,0 +1,73 @@
+pragma ton-solidity >= 0.70.0;
+
+/// Asterizm nonce contract
+contract TestContract {
+
+    uint static count_;
+
+    event GetHashEvent(uint _hash);
+    function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _param1, string _param2, bytes _param3) public pure {
+        // TvmCell payload = abi.encode(_param1, _param2, _param3);
+        TvmCell payload = abi.encode(_param2);
+        TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, bytes(payload.toSlice()));
+        emit GetHashEvent(_buildHash(packedData));
+    }
+
+    event CheckHashEvent(bool _result, bytes32 _hash, uint _resultHash);
+    function checkHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _param1, string _param2, bytes32 _hash, bytes _param3) public pure {
+        // TvmCell payload = abi.encode(_param1, _param2, _param3);
+        TvmCell payload = abi.encode(_param2);
+        TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, bytes(payload.toSlice()));
+        uint resultHash = _buildHash(packedData);
+
+        emit CheckHashEvent(resultHash == uint(_hash), _hash, resultHash);
+    }
+    
+
+    function _buildHash(TvmCell encodedCell) private pure returns(uint) {
+        TvmSlice encodedSlice = encodedCell.toSlice();
+        uint hash = sha256(encodedSlice);
+        TvmSlice payloadSlice = encodedSlice.loadRefAsSlice();
+        uint16 payloadDepth = payloadSlice.depth();
+
+        bytes chunk = "";
+        uint padding = 0;
+        for (uint i = 0; i <= payloadDepth; i++) {   
+            uint8 r = payloadSlice.refs();
+            uint16 b = payloadSlice.bits();
+
+            // Main tree
+            if (b > 0) {
+                // var 2
+                if (chunk.length == 0 && padding == 0) {
+                    chunk = bytes(payloadSlice)[0:b / 8];
+                    padding = chunk.length - 1;
+                } else if (chunk.length > 0 && chunk.length < 127) {
+                    if (padding != 0  && b / 8 >= padding) {
+                        chunk.append(bytes(payloadSlice)[0:padding]);
+                    }
+                    if (padding != 0  && b / 8 < padding) {
+                        chunk.append(bytes(payloadSlice)[0:b / 8]);
+                    } 
+                }
+
+                if (chunk.length == 127) {
+                    hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
+                    chunk = "";
+                    chunk.append(bytes(payloadSlice)[padding:b / 8]);
+                    padding = chunk.length - 1;
+                }
+
+                if (i == payloadDepth) {
+                    hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
+                }
+            }
+            
+             if (r > 0) {
+                payloadSlice = payloadSlice.loadRefAsSlice();
+             }
+        }
+
+        return hash;
+    }
+}
