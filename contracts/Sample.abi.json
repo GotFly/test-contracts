@@ -47,6 +47,55 @@
 			],
 			"outputs": [
 			]
+		},
+		{
+			"name": "GetRefsEvent",
+			"inputs": [
+				{"name":"_i","type":"uint256"},
+				{"name":"_refs","type":"uint8"},
+				{"name":"_depth","type":"uint16"},
+				{"name":"_bits","type":"uint16"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "GetPayloadEvent",
+			"inputs": [
+				{"name":"_mark","type":"string"},
+				{"name":"_data","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "GetTestEvent",
+			"inputs": [
+				{"name":"_mark","type":"string"},
+				{"name":"_i","type":"uint256"},
+				{"name":"_data","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "GetStepEvent",
+			"inputs": [
+				{"name":"_i","type":"uint256"},
+				{"name":"_chunk","type":"bytes"},
+				{"name":"_hash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "GetChunkEvent",
+			"inputs": [
+				{"name":"_bits","type":"uint256"},
+				{"name":"_chunk","type":"bytes"}
+			],
+			"outputs": [
+			]
 		}
 	],
 	"fields": [
