@@ -6,18 +6,16 @@ contract TestContract {
     constructor() {}
 
     event GetHashEvent(bytes32 _hash);
-    function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _param1, string memory _param2, bytes memory _param3) public {
-        // bytes memory payload = abi.encodePacked(_param1, _param2, _param3);
-        bytes memory payload = abi.encodePacked(_param2);
-        bytes memory packedData = abi.encodePacked(_srcChainId, _dstChainId, _srcAddress, _dstAddress, payload);
+    function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint _tokenAddressUint, uint8 _decimals) public {
+        bytes memory payload = abi.encodePacked(_dstAddressUint, _amount, _txId, _tokenAddressUint, _decimals);
+        bytes memory packedData = abi.encodePacked(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _txId, payload);
         emit GetHashEvent(_buildHash(packedData));
     }
 
     event CheckHashEvent(bool _result, uint _hash, bytes32 _resultHash);
-    function checkHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _param1, string memory _param2, bytes memory _param3, uint _hash) public {
-        // bytes memory payload = abi.encodePacked(_param1, _param2, _param3);
-        bytes memory payload = abi.encodePacked(_param2);
-        bytes memory packedData = abi.encodePacked(_srcChainId, _dstChainId, _srcAddress, _dstAddress, payload);
+    function checkHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint _tokenAddressUint, uint8 _decimals, uint _hash) public {
+        bytes memory payload = abi.encodePacked(_dstAddressUint, _amount, _txId, _tokenAddressUint, _decimals);
+        bytes memory packedData = abi.encodePacked(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _txId, payload);
         bytes32 resultHash = _buildHash(packedData);
 
         emit CheckHashEvent(resultHash == bytes32(_hash), _hash, resultHash);

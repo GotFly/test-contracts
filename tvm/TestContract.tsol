@@ -6,18 +6,16 @@ contract TestContract {
     uint static count_;
 
     event GetHashEvent(uint _hash);
-    function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _param1, string _param2, bytes _param3) public pure {
-        // TvmCell payload = abi.encode(_param1, _param2, _param3);
-        TvmCell payload = abi.encode(_param2);
-        TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, bytes(payload.toSlice()));
+    function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint _tokenAddressUint, uint8 _decimals) public pure {
+        TvmCell payload = abi.encode(_dstAddressUint, _amount, _txId, _tokenAddressUint, _decimals);
+        TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _txId, bytes(payload.toSlice()));
         emit GetHashEvent(_buildHash(packedData));
     }
 
     event CheckHashEvent(bool _result, bytes32 _hash, uint _resultHash);
-    function checkHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _param1, string _param2, bytes32 _hash, bytes _param3) public pure {
-        // TvmCell payload = abi.encode(_param1, _param2, _param3);
-        TvmCell payload = abi.encode(_param2);
-        TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, bytes(payload.toSlice()));
+    function checkHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint _tokenAddressUint, uint8 _decimals, bytes32 _hash) public pure {
+        TvmCell payload = abi.encode(_dstAddressUint, _amount, _txId, _tokenAddressUint, _decimals);
+        TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _txId, bytes(payload.toSlice()));
         uint resultHash = _buildHash(packedData);
 
         emit CheckHashEvent(resultHash == uint(_hash), _hash, resultHash);
