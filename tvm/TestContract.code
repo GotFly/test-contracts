@@ -284,84 +284,59 @@ PUSHCONT {
 					CALL $concatenateStrings_macro$
 				}
 				POP S6
+				.loc TestContract.tsol, 0
 			}
+			IF
+			.loc TestContract.tsol, 52
+			PUSH S5
+			PUSHPOW2DEC 32
+			CDATASIZE
+			DROP
+			NIP
+			RSHIFT 3
+			EQINT 127
 			PUSHCONT {
+				.loc TestContract.tsol, 53
 				PUSH S5
-				PUSHPOW2DEC 32
-				CDATASIZE
-				DROP
-				NIP
-				RSHIFT 3
-				EQINT 127
-				PUSHCONT {
-					.loc TestContract.tsol, 52
-					PUSH S5
-					CTOS
-					SHA256U
-					PUSH S9
-					NEWC
-					STU 256
-					STU 256
-					ENDC
-					CTOS
-					SHA256U
-					POP S9
-					.loc TestContract.tsol, 53
-					PUSH S5
-					CTOS
-					SHA256U
-					BLKPUSH 2, 6
-					PUSHSLICE xc00000000000000000000000002d2f45cf
-					NEWC
-					STSLICE
-					STU 256
-					STREF
-					STU 256
-					ENDC
-					PUSHINT 0
-					SENDRAWMSG
-					.loc TestContract.tsol, 54
-					PUSHREF {
-						.blob x
-					}
-					POP S6
-					.loc TestContract.tsol, 55
-					PUSH2 S5, S1
-					CTOS
-					PUSH S2
-					CALLREF {
-						PUSHINT 127
-						DIVMOD
-						ROTREV
-						PUSHCONT {
-							PLDREF
-							CTOS
-						}
-						REPEAT
-						SWAP
-						MULCONST 8
-						SDSKIPFIRST
-						PLDU 8
-					}
-					NEWC
-					STU 8
-					ENDC
-					CALLREF {
-						CALL $concatenateStrings_macro$
-					}
-					POP S6
-					.loc TestContract.tsol, 0
+				CTOS
+				SHA256U
+				PUSH S9
+				NEWC
+				STU 256
+				STU 256
+				ENDC
+				CTOS
+				SHA256U
+				POP S9
+				.loc TestContract.tsol, 54
+				PUSH S5
+				CTOS
+				SHA256U
+				BLKPUSH 2, 6
+				PUSHSLICE xc00000000000000000000000002d2f45cf
+				NEWC
+				STSLICE
+				STU 256
+				STREF
+				STU 256
+				ENDC
+				PUSHINT 0
+				SENDRAWMSG
+				.loc TestContract.tsol, 55
+				PUSHREF {
+					.blob x
 				}
-				IF
+				POP S6
+				.loc TestContract.tsol, 0
 			}
-			IFELSE
+			IF
 			.loc TestContract.tsol, 48
 			INC
 			.loc TestContract.tsol, 0
 		}
 		WHILE
 		DROP2
-		.loc TestContract.tsol, 81
+		.loc TestContract.tsol, 82
 		PUSH S3
 		PUSHPOW2DEC 32
 		CDATASIZE
@@ -385,7 +360,7 @@ PUSHCONT {
 		}
 		IF
 		PUSHCONT {
-			.loc TestContract.tsol, 82
+			.loc TestContract.tsol, 83
 			PUSH S3
 			CTOS
 			SHA256U
@@ -397,7 +372,7 @@ PUSHCONT {
 			CTOS
 			SHA256U
 			POP S7
-			.loc TestContract.tsol, 83
+			.loc TestContract.tsol, 84
 			PUSH S3
 			CTOS
 			SHA256U
@@ -417,11 +392,11 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 87
+	.loc TestContract.tsol, 88
 	DROP
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 88
+		.loc TestContract.tsol, 89
 		PUSH S3
 		LDREFRTOS
 		NIP

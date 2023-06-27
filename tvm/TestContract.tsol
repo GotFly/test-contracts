@@ -48,11 +48,11 @@ contract TestContract {
                 for (uint j = 0; j < b / 8; j++) {
                     if (chunk.length + 1 <= 127) {
                         chunk.append(bytes(p[j]));
-                    } else if (chunk.length == 127) {
+                    } 
+                    if (chunk.length == 127) {
                         hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
                         emit GetStepEvent(i, chunk, sha256(chunk));
                         chunk = "";
-                        chunk.append(bytes(p[j]));
                     }
                 }
                 // var 2
