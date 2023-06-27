@@ -50,11 +50,11 @@ hash - 0x29675a9a88257b1187b8c23dab7b2163414aaeb290b623c1815ca2b46eef49bd
 
 everdev sol compile Sample.sol && \
 
-everdev c i Sample && \
+everdev c i TestContract && \
 
-everdev contract deploy -v 10000000000 Sample && \
+everdev contract deploy -v 10000000000 TestContract && \
 
-everdev c run Sample
+everdev c run TestContract
 
 TvmCell
 has_idx 1bit, hash_crc32 1bit,  has_cache_bits 1bit, flags 2bit, size_bytes 3 bit

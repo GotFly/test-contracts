@@ -85,7 +85,7 @@ PUSHCONT {
 	DUP
 	GTINT 0
 	PUSHCONT {
-		.loc Sample.sol, 75
+		.loc Sample.sol, 72
 		PUSH S4
 		PUSHPOW2DEC 32
 		CDATASIZE
@@ -97,7 +97,7 @@ PUSHCONT {
 		EQINT 0
 		AND
 		PUSHCONT {
-			.loc Sample.sol, 76
+			.loc Sample.sol, 73
 			PUSH S6
 			NEWC
 			STSLICE
@@ -110,7 +110,7 @@ PUSHCONT {
 				CALL $bytes_substr_macro$
 			}
 			POP S5
-			.loc Sample.sol, 77
+			.loc Sample.sol, 74
 			PUSH S4
 			PUSHPOW2DEC 32
 			CDATASIZE
@@ -142,7 +142,7 @@ PUSHCONT {
 			}
 			IF
 			PUSHCONT {
-				.loc Sample.sol, 79
+				.loc Sample.sol, 76
 				PUSH S3
 				NEQINT 0
 				DUP
@@ -155,7 +155,7 @@ PUSHCONT {
 				}
 				IF
 				PUSHCONT {
-					.loc Sample.sol, 80
+					.loc Sample.sol, 77
 					PUSH2 S4, S6
 					NEWC
 					STSLICE
@@ -173,7 +173,7 @@ PUSHCONT {
 					.loc Sample.sol, 0
 				}
 				IF
-				.loc Sample.sol, 82
+				.loc Sample.sol, 79
 				PUSH S3
 				NEQINT 0
 				DUP
@@ -186,7 +186,7 @@ PUSHCONT {
 				}
 				IF
 				PUSHCONT {
-					.loc Sample.sol, 83
+					.loc Sample.sol, 80
 					PUSH2 S4, S6
 					NEWC
 					STSLICE
@@ -210,7 +210,7 @@ PUSHCONT {
 			IF
 		}
 		IFELSE
-		.loc Sample.sol, 88
+		.loc Sample.sol, 85
 		PUSH S4
 		PUSHPOW2DEC 32
 		CDATASIZE
@@ -219,7 +219,7 @@ PUSHCONT {
 		RSHIFT 3
 		EQINT 127
 		PUSHCONT {
-			.loc Sample.sol, 89
+			.loc Sample.sol, 86
 			PUSH S4
 			CTOS
 			SHA256U
@@ -231,7 +231,7 @@ PUSHCONT {
 			CTOS
 			SHA256U
 			POP S8
-			.loc Sample.sol, 90
+			.loc Sample.sol, 87
 			PUSH S4
 			CTOS
 			SHA256U
@@ -245,12 +245,12 @@ PUSHCONT {
 			ENDC
 			PUSHINT 0
 			SENDRAWMSG
-			.loc Sample.sol, 91
+			.loc Sample.sol, 88
 			PUSHREF {
 				.blob x
 			}
 			POP S5
-			.loc Sample.sol, 92
+			.loc Sample.sol, 89
 			PUSH2 S4, S6
 			NEWC
 			STSLICE
@@ -265,7 +265,7 @@ PUSHCONT {
 				CALL $concatenateStrings_macro$
 			}
 			POP S5
-			.loc Sample.sol, 93
+			.loc Sample.sol, 90
 			PUSH S4
 			PUSHPOW2DEC 32
 			CDATASIZE
@@ -278,11 +278,11 @@ PUSHCONT {
 			.loc Sample.sol, 0
 		}
 		IF
-		.loc Sample.sol, 96
+		.loc Sample.sol, 93
 		PUSH2 S2, S5
 		EQUAL
 		PUSHCONT {
-			.loc Sample.sol, 97
+			.loc Sample.sol, 94
 			PUSH S4
 			CTOS
 			SHA256U
@@ -294,7 +294,7 @@ PUSHCONT {
 			CTOS
 			SHA256U
 			POP S8
-			.loc Sample.sol, 98
+			.loc Sample.sol, 95
 			PUSH S4
 			CTOS
 			SHA256U
@@ -314,11 +314,11 @@ PUSHCONT {
 		.loc Sample.sol, 0
 	}
 	IF
-	.loc Sample.sol, 122
+	.loc Sample.sol, 119
 	DROP
 	GTINT 0
 	PUSHCONT {
-		.loc Sample.sol, 123
+		.loc Sample.sol, 120
 		PUSH S4
 		LDREFRTOS
 		NIP
@@ -338,7 +338,7 @@ BLKDROP 5
 DROP
 GETGLOB 6
 THROWIFNOT 76
-.loc Sample.sol, 190
+.loc Sample.sol, 187
 OVER
 PUSHCONT {
 	LDREF
@@ -371,20 +371,20 @@ THROW 0
 CALL $getHash_708bbdde_internal_macro$
 
 .macro getHash_708bbdde_internal_macro
-.loc Sample.sol, 191
+.loc Sample.sol, 188
 ACCEPT
-.loc Sample.sol, 192
+.loc Sample.sol, 189
 XCHG S2
 NEWC
 STU 256
 STU 256
 STREF
 ENDC
-.loc Sample.sol, 193
+.loc Sample.sol, 190
 CALLREF {
 	CALL $_buildHashCell_5b098628_internal_macro$
 }
-.loc Sample.sol, 195
+.loc Sample.sol, 192
 PUSHSLICE xc00000000000000000000000005c6188eb
 NEWC
 STSLICE

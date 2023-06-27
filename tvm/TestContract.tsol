@@ -3,10 +3,17 @@ pragma ton-solidity >= 0.70.0;
 /// Asterizm nonce contract
 contract TestContract {
 
-    uint static count_;
+    // uint static count_;
+
+    event GetPayloadEvent(string _mark, bytes _data);
+    event GetDepthtEvent(string _mark, uint16 _d);
+    event GetStepEvent(uint _i, bytes _chunk, uint _hash);
+
+    event GetLoopEvent(string _mark, uint _i, uint16 _bits, bytes _data, uint _padding, bytes _chunk, uint _length);
 
     event GetHashEvent(uint _hash);
     function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint _tokenAddressUint, uint8 _decimals) public pure {
+        tvm.accept();
         TvmCell payload = abi.encode(_dstAddressUint, _amount, _txId, _tokenAddressUint, _decimals);
         TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _txId, bytes(payload.toSlice()));
         emit GetHashEvent(_buildHash(packedData));
@@ -29,41 +36,57 @@ contract TestContract {
         uint16 payloadDepth = payloadSlice.depth();
 
         bytes chunk = "";
-        uint padding = 0;
+        // uint padding = 0;
         for (uint i = 0; i <= payloadDepth; i++) {   
             uint8 r = payloadSlice.refs();
             uint16 b = payloadSlice.bits();
 
             // Main tree
             if (b > 0) {
-                // var 2
-                if (chunk.length == 0 && padding == 0) {
-                    chunk = bytes(payloadSlice)[0:b / 8];
-                    padding = chunk.length - 1;
-                } else if (chunk.length > 0 && chunk.length < 127) {
-                    if (padding != 0  && b / 8 >= padding) {
-                        chunk.append(bytes(payloadSlice)[0:padding]);
+                // var 1
+                bytes p = bytes(payloadSlice);
+                for (uint j = 0; j < b / 8; j++) {
+                    if (chunk.length + 1 <= 127) {
+                        chunk.append(bytes(p[j]));
+                    } else if (chunk.length == 127) {
+                        hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
+                        emit GetStepEvent(i, chunk, sha256(chunk));
+                        chunk = "";
+                        chunk.append(bytes(p[j]));
                     }
-                    if (padding != 0  && b / 8 < padding) {
-                        chunk.append(bytes(payloadSlice)[0:b / 8]);
-                    } 
                 }
+                // var 2
+                // if (chunk.length == 0 && padding == 0) {
+                //     chunk = bytes(payloadSlice)[0:b / 8];
+                //     padding = chunk.length - 1;
+                // } else if (chunk.length > 0 && chunk.length < 127) {
+                //     if (padding != 0  && b / 8 >= padding) {
+                //         chunk.append(bytes(payloadSlice)[0:padding]);
+                //     }
+                //     if (padding != 0  && b / 8 < padding) {
+                //         chunk.append(bytes(payloadSlice)[0:b / 8]);
+                //     } 
+                // }
 
-                if (chunk.length == 127) {
-                    hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
-                    chunk = "";
-                    chunk.append(bytes(payloadSlice)[padding:b / 8]);
-                    padding = chunk.length - 1;
-                }
+                // emit GetLoopEvent("Loop", i, b, bytes(payloadSlice), padding, chunk, chunk.length);
 
-                if (i == payloadDepth) {
+                // if (chunk.length == 127) {
+                //     hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
+                //     emit GetStepEvent(i, chunk, sha256(chunk));
+                //     chunk = "";
+                //     chunk.append(bytes(payloadSlice)[padding:b / 8]);
+                //     padding = chunk.length - 1;
+                // }
+
+                if (chunk.length > 0 && chunk.length < 127 && i == payloadDepth) {
                     hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
+                    emit GetStepEvent(i, chunk, sha256(chunk));
                 }
             }
             
-             if (r > 0) {
+            if (r > 0) {
                 payloadSlice = payloadSlice.loadRefAsSlice();
-             }
+            }
         }
 
         return hash;

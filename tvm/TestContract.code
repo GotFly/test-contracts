@@ -1,0 +1,588 @@
+.version sol 0.70.0
+
+.macro constructor
+DROP
+GETGLOB 2
+ISNULL
+IFREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+GETGLOB 6
+THROWIF 51
+ENDS
+ACCEPT
+CALLREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.macro getHash
+DROP
+GETGLOB 6
+THROWIFNOT 76
+.loc TestContract.tsol, 15
+OVER
+PUSHCONT {
+	LDU 64
+	LDU 64
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+	LDU 64
+}
+IFELSE
+LDU 256
+LDU 256
+LDU 256
+LDREF
+ENDS
+CTOS
+LDU 256
+LDU 256
+LDU 256
+LDU 8
+ENDS
+.loc TestContract.tsol, 0
+CALLREF {
+	CALL $getHash_d5f3a4a3_internal_macro$
+}
+IFREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	getHash_d5f3a4a3_internal
+.type	getHash_d5f3a4a3_internal, @function
+CALL $getHash_d5f3a4a3_internal_macro$
+
+.macro getHash_d5f3a4a3_internal_macro
+.loc TestContract.tsol, 16
+ACCEPT
+.loc TestContract.tsol, 17
+XCPU S1, S4
+BLKSWAP 2, 3
+SWAP
+NEWC
+STU 256
+STU 256
+STU 256
+ROTREV
+NEWC
+STU 256
+STU 8
+STBREFR
+ENDC
+.loc TestContract.tsol, 18
+CTOS
+NEWC
+STSLICE
+ENDC
+REVERSE 6, 0
+NEWC
+STU 64
+STU 64
+STU 256
+STU 256
+STU 256
+STREF
+ENDC
+.loc TestContract.tsol, 19
+CALLREF {
+	CALL $_buildHash_a03d071c_internal_macro$
+}
+PUSHSLICE xc00000000000000000000000005c6188eb
+NEWC
+STSLICE
+STU 256
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc TestContract.tsol, 0
+
+.macro checkHash
+DROP
+GETGLOB 6
+THROWIFNOT 76
+.loc TestContract.tsol, 23
+OVER
+PUSHCONT {
+	LDU 64
+	LDU 64
+	LDREF
+	ENDS
+	CTOS
+}
+PUSHCONT {
+	LDU 64
+	LDU 64
+}
+IFELSE
+LDU 256
+LDU 256
+LDU 256
+LDREF
+ENDS
+CTOS
+LDU 256
+LDU 256
+LDU 256
+LDU 8
+LDREF
+ENDS
+CTOS
+LDU 256
+ENDS
+.loc TestContract.tsol, 0
+CALLREF {
+	CALL $checkHash_66be8cb2_internal_macro$
+}
+IFREF {
+	CALL $c7_to_c4$
+}
+THROW 0
+
+.globl	checkHash_66be8cb2_internal
+.type	checkHash_66be8cb2_internal, @function
+CALL $checkHash_66be8cb2_internal_macro$
+
+.macro checkHash_66be8cb2_internal_macro
+.loc TestContract.tsol, 24
+XCPU S2, S5
+BLKSWAP 2, 4
+SWAP
+NEWC
+STU 256
+STU 256
+STU 256
+ROTREV
+NEWC
+STU 256
+STU 8
+STBREFR
+ENDC
+.loc TestContract.tsol, 25
+CTOS
+NEWC
+STSLICE
+ENDC
+BLKSWAP 5, 2
+REVERSE 5, 0
+NEWC
+STU 64
+STU 64
+STU 256
+STU 256
+STU 256
+STREF
+ENDC
+.loc TestContract.tsol, 26
+CALLREF {
+	CALL $_buildHash_a03d071c_internal_macro$
+}
+.loc TestContract.tsol, 28
+PUSH2 S0, S1
+SWAP2
+EQUAL
+PUSHSLICE xc00000000000000000000000006196ee0c
+NEWC
+STSLICE
+STI 1
+STU 256
+STU 256
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc TestContract.tsol, 0
+
+.globl	_buildHash_a03d071c_internal
+.type	_buildHash_a03d071c_internal, @function
+CALL $_buildHash_a03d071c_internal_macro$
+
+.macro _buildHash_a03d071c_internal_macro
+.loc TestContract.tsol, 33
+CTOS
+.loc TestContract.tsol, 34
+DUP
+SHA256U
+.loc TestContract.tsol, 35
+SWAP
+LDREFRTOS
+NIP
+.loc TestContract.tsol, 36
+DUP
+SDEPTH
+.loc TestContract.tsol, 38
+PUSHREF {
+	.blob x
+}
+.loc TestContract.tsol, 40
+PUSHINT 0
+PUSHCONT {
+	PUSH2 S0, S2
+	LEQ
+}
+PUSHCONT {
+	.loc TestContract.tsol, 41
+	PUSH S3
+	SREFS
+	.loc TestContract.tsol, 42
+	PUSH S4
+	SBITS
+	.loc TestContract.tsol, 45
+	DUP
+	GTINT 0
+	PUSHCONT {
+		.loc TestContract.tsol, 47
+		PUSH S5
+		NEWC
+		STSLICE
+		ENDC
+		.loc TestContract.tsol, 48
+		PUSHINT 0
+		PUSHCONT {
+			PUSH2 S0, S2
+			RSHIFT 3
+			LESS
+		}
+		PUSHCONT {
+			.loc TestContract.tsol, 49
+			PUSH S5
+			PUSHPOW2DEC 32
+			CDATASIZE
+			DROP
+			NIP
+			RSHIFT 3
+			INC
+			PUSHINT 127
+			LEQ
+			PUSHCONT {
+				.loc TestContract.tsol, 50
+				PUSH2 S5, S1
+				CTOS
+				PUSH S2
+				CALLREF {
+					PUSHINT 127
+					DIVMOD
+					ROTREV
+					PUSHCONT {
+						PLDREF
+						CTOS
+					}
+					REPEAT
+					SWAP
+					MULCONST 8
+					SDSKIPFIRST
+					PLDU 8
+				}
+				NEWC
+				STU 8
+				ENDC
+				CALLREF {
+					CALL $concatenateStrings_macro$
+				}
+				POP S6
+			}
+			PUSHCONT {
+				PUSH S5
+				PUSHPOW2DEC 32
+				CDATASIZE
+				DROP
+				NIP
+				RSHIFT 3
+				EQINT 127
+				PUSHCONT {
+					.loc TestContract.tsol, 52
+					PUSH S5
+					CTOS
+					SHA256U
+					PUSH S9
+					NEWC
+					STU 256
+					STU 256
+					ENDC
+					CTOS
+					SHA256U
+					POP S9
+					.loc TestContract.tsol, 53
+					PUSH S5
+					CTOS
+					SHA256U
+					BLKPUSH 2, 6
+					PUSHSLICE xc00000000000000000000000002d2f45cf
+					NEWC
+					STSLICE
+					STU 256
+					STREF
+					STU 256
+					ENDC
+					PUSHINT 0
+					SENDRAWMSG
+					.loc TestContract.tsol, 54
+					PUSHREF {
+						.blob x
+					}
+					POP S6
+					.loc TestContract.tsol, 55
+					PUSH2 S5, S1
+					CTOS
+					PUSH S2
+					CALLREF {
+						PUSHINT 127
+						DIVMOD
+						ROTREV
+						PUSHCONT {
+							PLDREF
+							CTOS
+						}
+						REPEAT
+						SWAP
+						MULCONST 8
+						SDSKIPFIRST
+						PLDU 8
+					}
+					NEWC
+					STU 8
+					ENDC
+					CALLREF {
+						CALL $concatenateStrings_macro$
+					}
+					POP S6
+					.loc TestContract.tsol, 0
+				}
+				IF
+			}
+			IFELSE
+			.loc TestContract.tsol, 48
+			INC
+			.loc TestContract.tsol, 0
+		}
+		WHILE
+		DROP2
+		.loc TestContract.tsol, 81
+		PUSH S3
+		PUSHPOW2DEC 32
+		CDATASIZE
+		DROP
+		NIP
+		RSHIFT 3
+		GTINT 0
+		DUP
+		PUSHCONT {
+			DROP
+			PUSH S3
+			PUSHPOW2DEC 32
+			CDATASIZE
+			DROP
+			NIP
+			RSHIFT 3
+			LESSINT 127
+			PUSH2 S3, S5
+			EQUAL
+			AND
+		}
+		IF
+		PUSHCONT {
+			.loc TestContract.tsol, 82
+			PUSH S3
+			CTOS
+			SHA256U
+			PUSH S7
+			NEWC
+			STU 256
+			STU 256
+			ENDC
+			CTOS
+			SHA256U
+			POP S7
+			.loc TestContract.tsol, 83
+			PUSH S3
+			CTOS
+			SHA256U
+			BLKPUSH 2, 4
+			PUSHSLICE xc00000000000000000000000002d2f45cf
+			NEWC
+			STSLICE
+			STU 256
+			STREF
+			STU 256
+			ENDC
+			PUSHINT 0
+			SENDRAWMSG
+			.loc TestContract.tsol, 0
+		}
+		IF
+		.loc TestContract.tsol, 0
+	}
+	IF
+	.loc TestContract.tsol, 87
+	DROP
+	GTINT 0
+	PUSHCONT {
+		.loc TestContract.tsol, 88
+		PUSH S3
+		LDREFRTOS
+		NIP
+		POP S4
+		.loc TestContract.tsol, 0
+	}
+	IF
+	.loc TestContract.tsol, 40
+	INC
+	.loc TestContract.tsol, 0
+}
+WHILE
+BLKDROP 4
+.loc TestContract.tsol, 0
+
+.macro c4_to_c7
+PUSHROOT
+CTOS
+LDU 256 ; pubkey c4
+LDU 64 ; pubkey timestamp c4
+LDU 1 ; ctor flag
+NIP
+ENDS
+SETGLOB 3
+SETGLOB 2
+
+.macro c4_to_c7_with_init_storage
+PUSHROOT
+CTOS
+SBITS
+GTINT 1
+PUSHCONT {
+	PUSHINT 0
+	PUSHROOT
+	CTOS
+	PLDDICT ; D
+	PUSHINT 64
+	DICTUGET
+	THROWIFNOT 61
+	PLDU 256
+	SETGLOB 2
+	PUSHINT 0 ; timestamp
+	SETGLOB 3
+}
+IFREFELSE {
+	CALL $c4_to_c7$
+}
+
+.macro c7_to_c4
+GETGLOB 3
+GETGLOB 2
+NEWC
+STU 256
+STU 64
+STONE
+ENDC
+POPROOT
+
+.macro upd_only_time_in_c4
+PUSHROOT
+CTOS
+LDU 256
+LDU 64
+NIP
+GETGLOB 3
+ROT
+NEWC
+STU 256
+STU 64
+STSLICE
+ENDC
+POPROOT
+
+.internal-alias :main_internal, 0
+.internal :main_internal
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+PUSH S2
+CTOS
+PLDU 4
+MODPOW2 1
+IFRET
+OVER
+SEMPTY ; isEmpty
+IFJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+OVER
+LDUQ 32  ; [funcId] body' ok
+THROWIFNOT 60
+OVER
+IFNOTJMPREF {
+	GETGLOB 6
+	THROWIFNOT 76
+}
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.internal-alias :main_external, -1
+.internal :main_external
+PUSHROOT
+CTOS
+SBITS
+NEQINT 1
+SETGLOB 6
+OVER
+CALLREF {
+	CALL $c4_to_c7_with_init_storage$
+}
+LDU 1 ; haveSign msgSlice
+SWAP
+PUSHCONT {
+	PUSHPOW2 9
+	LDSLICEX
+	DUP
+	MYADDR
+	NEWC
+	STSLICE
+	STSLICE
+	ENDC
+	HASHCU
+	ROT
+	GETGLOB 2
+	CHKSIGNU
+	THROWIFNOT 40
+}
+IF
+LDU 64 ; timestamp msgSlice
+SWAP
+CALL $replay_protection_macro$
+LDU 32 ; funcId body
+SWAP
+CALLREF {
+	CALL $public_function_selector$
+}
+THROW 60
+
+.macro public_function_selector
+DUP
+PUSHINT 797542353
+EQUAL
+IFJMPREF {
+	CALL $checkHash$
+}
+DUP
+PUSHINT 1025454932
+EQUAL
+IFJMPREF {
+	CALL $getHash$
+}
+DUP
+PUSHINT 1756716863
+EQUAL
+IFJMPREF {
+	CALL $constructor$
+}
+

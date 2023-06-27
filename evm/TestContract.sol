@@ -4,7 +4,7 @@ pragma solidity ^0.8.17;
 contract TestContract {
 
     constructor() {}
-
+    event GetTestEvent(uint _i, uint _length, bytes _value, bytes32 _hash);
     event GetHashEvent(bytes32 _hash);
     function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint _tokenAddressUint, uint8 _decimals) public {
         bytes memory payload = abi.encodePacked(_dstAddressUint, _amount, _txId, _tokenAddressUint, _decimals);
@@ -22,9 +22,9 @@ contract TestContract {
     }
 
 
-    function _buildHash(bytes memory _packed) private pure returns(bytes32) {
-        bytes memory staticChunk = new bytes(80);
-        for (uint i = 0; i < 80; i++) {
+    function _buildHash(bytes memory _packed) private returns(bytes32) {
+        bytes memory staticChunk = new bytes(112);
+        for (uint i = 0; i < 112; i++) {
             staticChunk[i] = bytes(_packed)[i];
         }
 
@@ -38,6 +38,8 @@ contract TestContract {
 
         bytes32 hash = sha256(staticChunk);
 
+        emit GetTestEvent(0, staticChunk.length, staticChunk, hash);
+
         for (uint i = 0; i <= length / chunkLength; i++) {
             uint from = chunkLength * i;
             uint to = from + chunkLength <= length ? from + chunkLength : length;
@@ -47,6 +49,7 @@ contract TestContract {
             }
             
             hash = sha256(abi.encode(hash, sha256(chunk)));
+            emit GetTestEvent(i, chunk.length, chunk, sha256(chunk));
         }
 
         return hash;

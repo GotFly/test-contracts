@@ -10,9 +10,11 @@
 				{"name":"_dstChainId","type":"uint64"},
 				{"name":"_srcAddress","type":"uint256"},
 				{"name":"_dstAddress","type":"uint256"},
-				{"name":"_param1","type":"uint256"},
-				{"name":"_param2","type":"string"},
-				{"name":"_param3","type":"bytes"}
+				{"name":"_txId","type":"uint256"},
+				{"name":"_dstAddressUint","type":"uint256"},
+				{"name":"_amount","type":"uint256"},
+				{"name":"_tokenAddressUint","type":"uint256"},
+				{"name":"_decimals","type":"uint8"}
 			],
 			"outputs": [
 			]
@@ -24,10 +26,12 @@
 				{"name":"_dstChainId","type":"uint64"},
 				{"name":"_srcAddress","type":"uint256"},
 				{"name":"_dstAddress","type":"uint256"},
-				{"name":"_param1","type":"uint256"},
-				{"name":"_param2","type":"string"},
-				{"name":"_hash","type":"uint256"},
-				{"name":"_param3","type":"bytes"}
+				{"name":"_txId","type":"uint256"},
+				{"name":"_dstAddressUint","type":"uint256"},
+				{"name":"_amount","type":"uint256"},
+				{"name":"_tokenAddressUint","type":"uint256"},
+				{"name":"_decimals","type":"uint8"},
+				{"name":"_hash","type":"uint256"}
 			],
 			"outputs": [
 			]
@@ -41,9 +45,50 @@
 		}
 	],
 	"data": [
-		{"key":1,"name":"count_","type":"uint256"}
 	],
 	"events": [
+		{
+			"name": "GetPayloadEvent",
+			"inputs": [
+				{"name":"_mark","type":"string"},
+				{"name":"_data","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "GetDepthtEvent",
+			"inputs": [
+				{"name":"_mark","type":"string"},
+				{"name":"_d","type":"uint16"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "GetStepEvent",
+			"inputs": [
+				{"name":"_i","type":"uint256"},
+				{"name":"_chunk","type":"bytes"},
+				{"name":"_hash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "GetLoopEvent",
+			"inputs": [
+				{"name":"_mark","type":"string"},
+				{"name":"_i","type":"uint256"},
+				{"name":"_bits","type":"uint16"},
+				{"name":"_data","type":"bytes"},
+				{"name":"_padding","type":"uint256"},
+				{"name":"_chunk","type":"bytes"},
+				{"name":"_length","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
 		{
 			"name": "GetHashEvent",
 			"inputs": [
@@ -66,7 +111,6 @@
 	"fields": [
 		{"name":"_pubkey","type":"uint256"},
 		{"name":"_timestamp","type":"uint64"},
-		{"name":"_constructorFlag","type":"bool"},
-		{"name":"count_","type":"uint256"}
+		{"name":"_constructorFlag","type":"bool"}
 	]
 }
