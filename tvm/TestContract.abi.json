@@ -81,10 +81,7 @@
 				{"name":"_mark","type":"string"},
 				{"name":"_i","type":"uint256"},
 				{"name":"_bits","type":"uint16"},
-				{"name":"_data","type":"bytes"},
-				{"name":"_padding","type":"uint256"},
-				{"name":"_chunk","type":"bytes"},
-				{"name":"_length","type":"uint256"}
+				{"name":"_data","type":"bytes"}
 			],
 			"outputs": [
 			]
