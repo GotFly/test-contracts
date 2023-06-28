@@ -87,6 +87,15 @@
 			]
 		},
 		{
+			"name": "GetChunkEvent",
+			"inputs": [
+				{"name":"_length","type":"uint256"},
+				{"name":"_chunk","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "GetHashEvent",
 			"inputs": [
 				{"name":"_hash","type":"uint256"}

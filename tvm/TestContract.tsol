@@ -11,12 +11,14 @@ contract TestContract {
 
     event GetLoopEvent(string _mark, uint _i, uint16 _bits, bytes _data);
 
+    event GetChunkEvent(uint _length, bytes _chunk);
+
     event GetHashEvent(uint _hash);
     function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint8 _decimals, bytes _param1) public pure {
         tvm.accept();
-        TvmCell payload = abi.encode(_dstAddressUint, _amount, _txId, _decimals, _param1);
+        TvmCell payload = abi.encode(_dstAddressUint, _param1, _amount, _txId, _decimals);
         TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _txId, bytes(payload.toSlice()));
-        emit GetHashEvent(_buildHash3(packedData));
+        emit GetHashEvent(_buildHash4(packedData));
     }
 
     event CheckHashEvent(bool _result, bytes32 _hash, uint _resultHash);
@@ -143,6 +145,71 @@ contract TestContract {
                 payloadSlice = payloadSlice.loadRefAsSlice();
             }
         }
+
+        TvmSlice chunkSlice = TvmSlice(chunk);
+        uint16 chunkDepth = chunkSlice.depth();
+    
+        emit GetDepthtEvent("Slice", chunkDepth);
+
+        for (uint i = 0; i <= chunkDepth; i++) {   
+            uint8 r = chunkSlice.refs();
+            uint16 b = chunkSlice.bits();
+            emit GetLoopEvent("Loop", i, b, bytes(chunkSlice));
+            if (b > 0) {
+                hash = sha256(abi.encode(hash, sha256(chunkSlice)).toSlice());
+                emit GetStepEvent(i, bytes(chunkSlice), sha256(chunkSlice));
+            }
+            if (r > 0) {
+                chunkSlice = chunkSlice.loadRefAsSlice();
+            }
+        }
+
+        return hash;
+    }
+
+    /// var 4
+    function _buildHash4(TvmCell encodedCell) private pure returns(uint) {
+        TvmSlice encodedSlice = encodedCell.toSlice();
+        uint hash = sha256(encodedSlice);
+        TvmSlice payloadSlice = encodedSlice.loadRefAsSlice();
+        uint16 payloadDepth = payloadSlice.depth();
+
+        bytes chunk = "";
+        for (uint i = 0; i <= payloadDepth; i++) {   
+            uint8 r = payloadSlice.refs();
+            uint16 b = payloadSlice.bits();
+            // Nested refs
+            if (r > 1) {
+                for (uint2 j = 1; j < r; j++) {   
+                    TvmCell nestedCell = payloadSlice.preloadRef(j);
+                    TvmSlice nestedSlice = nestedCell.toSlice();
+
+                    uint16 nestedDepth = nestedSlice.depth();
+
+                    for (uint k = 0; k <= nestedDepth; k++) {   
+
+                        uint8 nestedRefs = nestedSlice.refs();
+                        uint16 nestedBits = nestedSlice.bits();
+
+                        if (nestedBits > 0) {
+                            chunk.append(bytes(nestedSlice)[0:nestedBits / 8]);
+                        }
+                        if (nestedRefs > 0) {
+                            nestedSlice = nestedSlice.loadRefAsSlice();
+                        }
+                    }
+                }
+            }
+            // Main tree
+            if (b > 0) {
+                chunk.append(bytes(payloadSlice)[0:b / 8]);
+            }
+            if (r > 0) {
+                payloadSlice = payloadSlice.loadRefAsSlice();
+            }
+        }
+
+        emit GetChunkEvent(chunk.length, chunk);
 
         TvmSlice chunkSlice = TvmSlice(chunk);
         uint16 chunkDepth = chunkSlice.depth();
