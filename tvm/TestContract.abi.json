@@ -13,8 +13,8 @@
 				{"name":"_txId","type":"uint256"},
 				{"name":"_dstAddressUint","type":"uint256"},
 				{"name":"_amount","type":"uint256"},
-				{"name":"_tokenAddressUint","type":"uint256"},
-				{"name":"_decimals","type":"uint8"}
+				{"name":"_decimals","type":"uint8"},
+				{"name":"_param1","type":"bytes"}
 			],
 			"outputs": [
 			]
@@ -29,8 +29,8 @@
 				{"name":"_txId","type":"uint256"},
 				{"name":"_dstAddressUint","type":"uint256"},
 				{"name":"_amount","type":"uint256"},
-				{"name":"_tokenAddressUint","type":"uint256"},
 				{"name":"_decimals","type":"uint8"},
+				{"name":"_param1","type":"bytes"},
 				{"name":"_hash","type":"uint256"}
 			],
 			"outputs": [

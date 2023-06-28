@@ -12,16 +12,17 @@ contract TestContract {
     event GetLoopEvent(string _mark, uint _i, uint16 _bits, bytes _data);
 
     event GetHashEvent(uint _hash);
-    function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint _tokenAddressUint, uint8 _decimals) public pure {
+    function getHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint8 _decimals, bytes _param1) public pure {
         tvm.accept();
-        TvmCell payload = abi.encode(_dstAddressUint, _amount, _txId, _tokenAddressUint, _decimals);
+        TvmCell payload = abi.encode(_dstAddressUint, _amount, _txId, _decimals, _param1);
         TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _txId, bytes(payload.toSlice()));
         emit GetHashEvent(_buildHash3(packedData));
     }
 
     event CheckHashEvent(bool _result, bytes32 _hash, uint _resultHash);
-    function checkHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint _tokenAddressUint, uint8 _decimals, bytes32 _hash) public pure {
-        TvmCell payload = abi.encode(_dstAddressUint, _amount, _txId, _tokenAddressUint, _decimals);
+    function checkHash(uint64 _srcChainId, uint64 _dstChainId, uint _srcAddress, uint _dstAddress, uint _txId, uint _dstAddressUint, uint _amount, uint8 _decimals, bytes _param1, bytes32 _hash) public pure {
+        tvm.accept();
+        TvmCell payload = abi.encode(_dstAddressUint, _amount, _txId, _decimals, _param1);
         TvmCell packedData = abi.encode(_srcChainId, _dstChainId, _srcAddress, _dstAddress, _txId, bytes(payload.toSlice()));
         uint resultHash = _buildHash3(packedData);
 
@@ -36,7 +37,6 @@ contract TestContract {
         uint16 payloadDepth = payloadSlice.depth();
 
         bytes chunk = "";
-        // uint padding = 0;
         for (uint i = 0; i <= payloadDepth; i++) {   
             uint8 r = payloadSlice.refs();
             uint16 b = payloadSlice.bits();
@@ -78,7 +78,7 @@ contract TestContract {
         uint16 payloadDepth = payloadSlice.depth();
 
         bytes chunk = "";
-        // uint padding = 0;
+        uint padding = 0;
         for (uint i = 0; i <= payloadDepth; i++) {   
             uint8 r = payloadSlice.refs();
             uint16 b = payloadSlice.bits();
@@ -100,7 +100,7 @@ contract TestContract {
                     } 
                 }
 
-                emit GetLoopEvent("Loop", i, b, p, padding, chunk, chunk.length);
+                // emit GetLoopEvent("Loop", i, b, p, padding, chunk, chunk.length);
 
                 if (chunk.length == 127) {
                     hash = sha256(abi.encode(hash, sha256(chunk)).toSlice());
@@ -146,15 +146,16 @@ contract TestContract {
 
         TvmSlice chunkSlice = TvmSlice(chunk);
         uint16 chunkDepth = chunkSlice.depth();
-        // emit GetDepthtEvent("Slice", chunkDepth);
+    
+        emit GetDepthtEvent("Slice", chunkDepth);
 
         for (uint i = 0; i <= chunkDepth; i++) {   
             uint8 r = chunkSlice.refs();
             uint16 b = chunkSlice.bits();
-            // emit GetLoopEvent("Loop", i, b, bytes(chunkSlice));
+            emit GetLoopEvent("Loop", i, b, bytes(chunkSlice));
             if (b > 0) {
                 hash = sha256(abi.encode(hash, sha256(chunkSlice)).toSlice());
-                // emit GetStepEvent(i, bytes(chunkSlice), sha256(chunkSlice));
+                emit GetStepEvent(i, bytes(chunkSlice), sha256(chunkSlice));
             }
             if (r > 0) {
                 chunkSlice = chunkSlice.loadRefAsSlice();
