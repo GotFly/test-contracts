@@ -87,6 +87,15 @@
 			]
 		},
 		{
+			"name": "GetCellEvent",
+			"inputs": [
+				{"name":"_mark","type":"string"},
+				{"name":"_cell","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
 			"name": "GetChunkEvent",
 			"inputs": [
 				{"name":"_length","type":"uint256"},

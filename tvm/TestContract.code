@@ -20,7 +20,7 @@ THROW 0
 DROP
 GETGLOB 6
 THROWIFNOT 76
-.loc TestContract.tsol, 17
+.loc TestContract.tsol, 28
 OVER
 PUSHCONT {
 	LDU 64
@@ -59,9 +59,9 @@ THROW 0
 CALL $getHash_729c37e2_internal_macro$
 
 .macro getHash_729c37e2_internal_macro
-.loc TestContract.tsol, 18
+.loc TestContract.tsol, 29
 ACCEPT
-.loc TestContract.tsol, 19
+.loc TestContract.tsol, 30
 XCPU S1, S4
 SWAP2
 ROLL 4
@@ -72,7 +72,7 @@ STU 256
 STU 256
 STU 8
 ENDC
-.loc TestContract.tsol, 20
+.loc TestContract.tsol, 31
 CTOS
 NEWC
 STSLICE
@@ -86,7 +86,7 @@ STU 256
 STU 256
 STREF
 ENDC
-.loc TestContract.tsol, 21
+.loc TestContract.tsol, 32
 CALLREF {
 	CALL $_buildHash4_88faf40d_internal_macro$
 }
@@ -103,7 +103,7 @@ SENDRAWMSG
 DROP
 GETGLOB 6
 THROWIFNOT 76
-.loc TestContract.tsol, 25
+.loc TestContract.tsol, 36
 OVER
 PUSHCONT {
 	LDU 64
@@ -143,9 +143,9 @@ THROW 0
 CALL $checkHash_fa97a525_internal_macro$
 
 .macro checkHash_fa97a525_internal_macro
-.loc TestContract.tsol, 26
+.loc TestContract.tsol, 37
 ACCEPT
-.loc TestContract.tsol, 27
+.loc TestContract.tsol, 38
 XCPU S2, S5
 BLKSWAP 2, 4
 SWAP
@@ -156,7 +156,7 @@ STU 256
 STU 8
 STREF
 ENDC
-.loc TestContract.tsol, 28
+.loc TestContract.tsol, 39
 CTOS
 NEWC
 STSLICE
@@ -171,11 +171,11 @@ STU 256
 STU 256
 STREF
 ENDC
-.loc TestContract.tsol, 29
+.loc TestContract.tsol, 40
 CALLREF {
 	CALL $_buildHash3_f30a061f_internal_macro$
 }
-.loc TestContract.tsol, 31
+.loc TestContract.tsol, 42
 PUSH2 S0, S1
 SWAP2
 EQUAL
@@ -195,45 +195,45 @@ SENDRAWMSG
 CALL $_buildHash1_909773ec_internal_macro$
 
 .macro _buildHash1_909773ec_internal_macro
-.loc TestContract.tsol, 36
+.loc TestContract.tsol, 47
 CTOS
-.loc TestContract.tsol, 37
+.loc TestContract.tsol, 48
 DUP
 SHA256U
-.loc TestContract.tsol, 38
+.loc TestContract.tsol, 49
 SWAP
 LDREFRTOS
 NIP
-.loc TestContract.tsol, 39
+.loc TestContract.tsol, 50
 DUP
 SDEPTH
-.loc TestContract.tsol, 41
+.loc TestContract.tsol, 52
 PUSHREF {
 	.blob x
 }
-.loc TestContract.tsol, 42
+.loc TestContract.tsol, 53
 PUSHINT 0
 PUSHCONT {
 	PUSH2 S0, S2
 	LEQ
 }
 PUSHCONT {
-	.loc TestContract.tsol, 43
+	.loc TestContract.tsol, 54
 	PUSH S3
 	SREFS
-	.loc TestContract.tsol, 44
+	.loc TestContract.tsol, 55
 	PUSH S4
 	SBITS
-	.loc TestContract.tsol, 47
+	.loc TestContract.tsol, 58
 	DUP
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 49
+		.loc TestContract.tsol, 60
 		PUSH S5
 		NEWC
 		STSLICE
 		ENDC
-		.loc TestContract.tsol, 50
+		.loc TestContract.tsol, 61
 		PUSHINT 0
 		PUSHCONT {
 			PUSH2 S0, S2
@@ -241,7 +241,7 @@ PUSHCONT {
 			LESS
 		}
 		PUSHCONT {
-			.loc TestContract.tsol, 51
+			.loc TestContract.tsol, 62
 			PUSH S5
 			PUSHPOW2DEC 32
 			CDATASIZE
@@ -252,7 +252,7 @@ PUSHCONT {
 			PUSHINT 127
 			LEQ
 			PUSHCONT {
-				.loc TestContract.tsol, 52
+				.loc TestContract.tsol, 63
 				PUSH2 S5, S1
 				CTOS
 				PUSH S2
@@ -280,7 +280,7 @@ PUSHCONT {
 				.loc TestContract.tsol, 0
 			}
 			IF
-			.loc TestContract.tsol, 54
+			.loc TestContract.tsol, 65
 			PUSH S5
 			PUSHPOW2DEC 32
 			CDATASIZE
@@ -289,7 +289,7 @@ PUSHCONT {
 			RSHIFT 3
 			EQINT 127
 			PUSHCONT {
-				.loc TestContract.tsol, 55
+				.loc TestContract.tsol, 66
 				PUSH S5
 				CTOS
 				SHA256U
@@ -301,7 +301,7 @@ PUSHCONT {
 				CTOS
 				SHA256U
 				POP S9
-				.loc TestContract.tsol, 56
+				.loc TestContract.tsol, 67
 				PUSH S5
 				CTOS
 				SHA256U
@@ -317,7 +317,7 @@ PUSHCONT {
 				ENDC
 				PUSHINT 0
 				SENDRAWMSG
-				.loc TestContract.tsol, 57
+				.loc TestContract.tsol, 68
 				PUSHREF {
 					.blob x
 				}
@@ -325,13 +325,13 @@ PUSHCONT {
 				.loc TestContract.tsol, 0
 			}
 			IF
-			.loc TestContract.tsol, 50
+			.loc TestContract.tsol, 61
 			INC
 			.loc TestContract.tsol, 0
 		}
 		WHILE
 		DROP2
-		.loc TestContract.tsol, 61
+		.loc TestContract.tsol, 72
 		PUSH S3
 		PUSHPOW2DEC 32
 		CDATASIZE
@@ -355,7 +355,7 @@ PUSHCONT {
 		}
 		IF
 		PUSHCONT {
-			.loc TestContract.tsol, 62
+			.loc TestContract.tsol, 73
 			PUSH S3
 			CTOS
 			SHA256U
@@ -367,7 +367,7 @@ PUSHCONT {
 			CTOS
 			SHA256U
 			POP S7
-			.loc TestContract.tsol, 63
+			.loc TestContract.tsol, 74
 			PUSH S3
 			CTOS
 			SHA256U
@@ -389,11 +389,11 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 67
+	.loc TestContract.tsol, 78
 	DROP
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 68
+		.loc TestContract.tsol, 79
 		PUSH S3
 		LDREFRTOS
 		NIP
@@ -401,7 +401,7 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 42
+	.loc TestContract.tsol, 53
 	INC
 	.loc TestContract.tsol, 0
 }
@@ -414,47 +414,47 @@ BLKDROP 4
 CALL $_buildHash2_f52301bd_internal_macro$
 
 .macro _buildHash2_f52301bd_internal_macro
-.loc TestContract.tsol, 77
+.loc TestContract.tsol, 88
 CTOS
-.loc TestContract.tsol, 78
+.loc TestContract.tsol, 89
 DUP
 SHA256U
-.loc TestContract.tsol, 79
+.loc TestContract.tsol, 90
 SWAP
 LDREFRTOS
 NIP
-.loc TestContract.tsol, 80
+.loc TestContract.tsol, 91
 DUP
 SDEPTH
-.loc TestContract.tsol, 82
+.loc TestContract.tsol, 93
 PUSHREF {
 	.blob x
 }
-.loc TestContract.tsol, 83
+.loc TestContract.tsol, 94
 PUSHINT 0
 DUP
-.loc TestContract.tsol, 84
+.loc TestContract.tsol, 95
 PUSHCONT {
 	PUSH2 S0, S3
 	LEQ
 }
 PUSHCONT {
-	.loc TestContract.tsol, 85
+	.loc TestContract.tsol, 96
 	PUSH S4
 	SREFS
-	.loc TestContract.tsol, 86
+	.loc TestContract.tsol, 97
 	PUSH S5
 	SBITS
-	.loc TestContract.tsol, 89
+	.loc TestContract.tsol, 100
 	DUP
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 90
+		.loc TestContract.tsol, 101
 		PUSH S6
 		NEWC
 		STSLICE
 		ENDC
-		.loc TestContract.tsol, 93
+		.loc TestContract.tsol, 104
 		PUSH S5
 		PUSHPOW2DEC 32
 		CDATASIZE
@@ -466,7 +466,7 @@ PUSHCONT {
 		EQINT 0
 		AND
 		PUSHCONT {
-			.loc TestContract.tsol, 94
+			.loc TestContract.tsol, 105
 			DUP
 			PUSHINT 0
 			PUSH S3
@@ -476,7 +476,7 @@ PUSHCONT {
 				CALL $bytes_substr_macro$
 			}
 			POP S6
-			.loc TestContract.tsol, 95
+			.loc TestContract.tsol, 106
 			PUSH S5
 			PUSHPOW2DEC 32
 			CDATASIZE
@@ -508,7 +508,7 @@ PUSHCONT {
 			}
 			IF
 			PUSHCONT {
-				.loc TestContract.tsol, 97
+				.loc TestContract.tsol, 108
 				PUSH S4
 				NEQINT 0
 				DUP
@@ -521,7 +521,7 @@ PUSHCONT {
 				}
 				IF
 				PUSHCONT {
-					.loc TestContract.tsol, 98
+					.loc TestContract.tsol, 109
 					PUSH2 S5, S0
 					PUSHINT 0
 					PUSH S7
@@ -536,7 +536,7 @@ PUSHCONT {
 					.loc TestContract.tsol, 0
 				}
 				IF
-				.loc TestContract.tsol, 100
+				.loc TestContract.tsol, 111
 				PUSH S4
 				NEQINT 0
 				DUP
@@ -549,7 +549,7 @@ PUSHCONT {
 				}
 				IF
 				PUSHCONT {
-					.loc TestContract.tsol, 101
+					.loc TestContract.tsol, 112
 					PUSH2 S5, S0
 					PUSHINT 0
 					PUSH S4
@@ -570,7 +570,7 @@ PUSHCONT {
 			IF
 		}
 		IFELSE
-		.loc TestContract.tsol, 107
+		.loc TestContract.tsol, 118
 		PUSH S5
 		PUSHPOW2DEC 32
 		CDATASIZE
@@ -579,7 +579,7 @@ PUSHCONT {
 		RSHIFT 3
 		EQINT 127
 		PUSHCONT {
-			.loc TestContract.tsol, 108
+			.loc TestContract.tsol, 119
 			PUSH S5
 			CTOS
 			SHA256U
@@ -591,7 +591,7 @@ PUSHCONT {
 			CTOS
 			SHA256U
 			POP S9
-			.loc TestContract.tsol, 109
+			.loc TestContract.tsol, 120
 			PUSH S5
 			CTOS
 			SHA256U
@@ -607,12 +607,12 @@ PUSHCONT {
 			ENDC
 			PUSHINT 0
 			SENDRAWMSG
-			.loc TestContract.tsol, 110
+			.loc TestContract.tsol, 121
 			PUSHREF {
 				.blob x
 			}
 			POP S6
-			.loc TestContract.tsol, 111
+			.loc TestContract.tsol, 122
 			PUSH3 S5, S0, S4
 			PUSH S4
 			RSHIFT 3
@@ -624,7 +624,7 @@ PUSHCONT {
 				CALL $concatenateStrings_macro$
 			}
 			POP S6
-			.loc TestContract.tsol, 112
+			.loc TestContract.tsol, 123
 			PUSH S5
 			PUSHPOW2DEC 32
 			CDATASIZE
@@ -637,7 +637,7 @@ PUSHCONT {
 			.loc TestContract.tsol, 0
 		}
 		IF
-		.loc TestContract.tsol, 115
+		.loc TestContract.tsol, 126
 		DROP
 		PUSH S4
 		PUSHPOW2DEC 32
@@ -662,7 +662,7 @@ PUSHCONT {
 		}
 		IF
 		PUSHCONT {
-			.loc TestContract.tsol, 116
+			.loc TestContract.tsol, 127
 			PUSH S4
 			CTOS
 			SHA256U
@@ -674,7 +674,7 @@ PUSHCONT {
 			CTOS
 			SHA256U
 			POP S8
-			.loc TestContract.tsol, 117
+			.loc TestContract.tsol, 128
 			PUSH S4
 			CTOS
 			SHA256U
@@ -696,11 +696,11 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 121
+	.loc TestContract.tsol, 132
 	DROP
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 122
+		.loc TestContract.tsol, 133
 		PUSH S4
 		LDREFRTOS
 		NIP
@@ -708,7 +708,7 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 84
+	.loc TestContract.tsol, 95
 	INC
 	.loc TestContract.tsol, 0
 }
@@ -721,40 +721,40 @@ BLKDROP 5
 CALL $_buildHash3_f30a061f_internal_macro$
 
 .macro _buildHash3_f30a061f_internal_macro
-.loc TestContract.tsol, 131
+.loc TestContract.tsol, 142
 CTOS
-.loc TestContract.tsol, 132
+.loc TestContract.tsol, 143
 DUP
 SHA256U
-.loc TestContract.tsol, 133
+.loc TestContract.tsol, 144
 SWAP
 LDREFRTOS
 NIP
-.loc TestContract.tsol, 134
+.loc TestContract.tsol, 145
 DUP
 SDEPTH
-.loc TestContract.tsol, 136
+.loc TestContract.tsol, 147
 PUSHREF {
 	.blob x
 }
-.loc TestContract.tsol, 137
+.loc TestContract.tsol, 148
 PUSHINT 0
 PUSHCONT {
 	PUSH2 S0, S2
 	LEQ
 }
 PUSHCONT {
-	.loc TestContract.tsol, 138
+	.loc TestContract.tsol, 149
 	PUSH S3
 	SREFS
-	.loc TestContract.tsol, 139
+	.loc TestContract.tsol, 150
 	PUSH S4
 	SBITS
-	.loc TestContract.tsol, 141
+	.loc TestContract.tsol, 152
 	DUP
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 142
+		.loc TestContract.tsol, 153
 		PUSH2 S3, S5
 		NEWC
 		STSLICE
@@ -773,11 +773,11 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 144
+	.loc TestContract.tsol, 155
 	DROP
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 145
+		.loc TestContract.tsol, 156
 		PUSH S3
 		LDREFRTOS
 		NIP
@@ -785,18 +785,18 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 137
+	.loc TestContract.tsol, 148
 	INC
 	.loc TestContract.tsol, 0
 }
 WHILE
 DROP
-.loc TestContract.tsol, 149
+.loc TestContract.tsol, 160
 CTOS
-.loc TestContract.tsol, 150
+.loc TestContract.tsol, 161
 DUP
 SDEPTH
-.loc TestContract.tsol, 152
+.loc TestContract.tsol, 163
 DUP
 PUSHREF {
 	.blob x536c696365
@@ -809,20 +809,20 @@ STU 16
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc TestContract.tsol, 154
+.loc TestContract.tsol, 165
 PUSHINT 0
 PUSHCONT {
 	PUSH2 S0, S1
 	LEQ
 }
 PUSHCONT {
-	.loc TestContract.tsol, 155
+	.loc TestContract.tsol, 166
 	PUSH S2
 	SREFS
-	.loc TestContract.tsol, 156
+	.loc TestContract.tsol, 167
 	PUSH S3
 	SBITS
-	.loc TestContract.tsol, 157
+	.loc TestContract.tsol, 168
 	PUSH S4
 	NEWC
 	STSLICE
@@ -841,10 +841,10 @@ PUSHCONT {
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
-	.loc TestContract.tsol, 158
+	.loc TestContract.tsol, 169
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 159
+		.loc TestContract.tsol, 170
 		PUSH S3
 		SHA256U
 		PUSH S7
@@ -855,7 +855,7 @@ PUSHCONT {
 		CTOS
 		SHA256U
 		POP S7
-		.loc TestContract.tsol, 160
+		.loc TestContract.tsol, 171
 		PUSH S3
 		SHA256U
 		PUSH S4
@@ -877,10 +877,10 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 162
+	.loc TestContract.tsol, 173
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 163
+		.loc TestContract.tsol, 174
 		PUSH S2
 		LDREFRTOS
 		NIP
@@ -888,7 +888,7 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 154
+	.loc TestContract.tsol, 165
 	INC
 	.loc TestContract.tsol, 0
 }
@@ -901,40 +901,83 @@ BLKDROP 5
 CALL $_buildHash4_88faf40d_internal_macro$
 
 .macro _buildHash4_88faf40d_internal_macro
-.loc TestContract.tsol, 172
+.loc TestContract.tsol, 183
+DUP
 CTOS
-.loc TestContract.tsol, 173
+.loc TestContract.tsol, 184
 DUP
 SHA256U
-.loc TestContract.tsol, 174
+.loc TestContract.tsol, 185
 SWAP
 LDREFRTOS
 NIP
-.loc TestContract.tsol, 175
+.loc TestContract.tsol, 186
 DUP
 SDEPTH
-.loc TestContract.tsol, 177
+.loc TestContract.tsol, 188
+OVER
+NEWC
+STSLICE
+ENDC
+PUSHREF {
+	.blob x5061796c6f61642066726f6d20726566
+}
+PUSHSLICE xc00000000000000000000000001fac0cd9
+NEWC
+STSLICE
+STREF
+STREF
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc TestContract.tsol, 189
+DUP
+PUSHREF {
+	.blob x5061796c6f6164206465707468
+}
+PUSHSLICE xc000000000000000000000000072743272
+NEWC
+STSLICE
+STREF
+STU 16
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc TestContract.tsol, 191
+ROLL 3
+PUSHREF {
+	.blob x5061796c6f61642063656c6c
+}
+PUSHSLICE xc00000000000000000000000001382e7ff
+NEWC
+STSLICE
+STREF
+STREF
+ENDC
+PUSHINT 0
+SENDRAWMSG
+.loc TestContract.tsol, 193
 PUSHREF {
 	.blob x
 }
-.loc TestContract.tsol, 178
+.loc TestContract.tsol, 194
 PUSHINT 0
 PUSHCONT {
 	PUSH2 S0, S2
 	LEQ
 }
 PUSHCONT {
-	.loc TestContract.tsol, 179
+	.loc TestContract.tsol, 195
 	PUSH S3
 	SREFS
-	.loc TestContract.tsol, 180
+	.loc TestContract.tsol, 196
 	PUSH S4
 	SBITS
-	.loc TestContract.tsol, 204
+	.loc TestContract.tsol, 220
 	DUP
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 205
+		.loc TestContract.tsol, 221
 		PUSH2 S3, S5
 		NEWC
 		STSLICE
@@ -953,11 +996,26 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 207
+	.loc TestContract.tsol, 223
 	DROP
+	PUSH2 S2, S2
+	PUSHPOW2DEC 32
+	CDATASIZE
+	DROP
+	NIP
+	RSHIFT 3
+	PUSHSLICE xc00000000000000000000000000ce25705
+	NEWC
+	STSLICE
+	STU 256
+	STREF
+	ENDC
+	PUSHINT 0
+	SENDRAWMSG
+	.loc TestContract.tsol, 224
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 208
+		.loc TestContract.tsol, 225
 		PUSH S3
 		LDREFRTOS
 		NIP
@@ -965,13 +1023,13 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 178
+	.loc TestContract.tsol, 194
 	INC
 	.loc TestContract.tsol, 0
 }
 WHILE
 DROP
-.loc TestContract.tsol, 212
+.loc TestContract.tsol, 229
 PUSH2 S0, S0
 PUSHPOW2DEC 32
 CDATASIZE
@@ -986,12 +1044,12 @@ STREF
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc TestContract.tsol, 214
+.loc TestContract.tsol, 231
 CTOS
-.loc TestContract.tsol, 215
+.loc TestContract.tsol, 232
 DUP
 SDEPTH
-.loc TestContract.tsol, 217
+.loc TestContract.tsol, 234
 DUP
 PUSHREF {
 	.blob x536c696365
@@ -1004,20 +1062,20 @@ STU 16
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc TestContract.tsol, 219
+.loc TestContract.tsol, 236
 PUSHINT 0
 PUSHCONT {
 	PUSH2 S0, S1
 	LEQ
 }
 PUSHCONT {
-	.loc TestContract.tsol, 220
+	.loc TestContract.tsol, 237
 	PUSH S2
 	SREFS
-	.loc TestContract.tsol, 221
+	.loc TestContract.tsol, 238
 	PUSH S3
 	SBITS
-	.loc TestContract.tsol, 222
+	.loc TestContract.tsol, 239
 	PUSH S4
 	NEWC
 	STSLICE
@@ -1036,10 +1094,10 @@ PUSHCONT {
 	ENDC
 	PUSHINT 0
 	SENDRAWMSG
-	.loc TestContract.tsol, 223
+	.loc TestContract.tsol, 240
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 224
+		.loc TestContract.tsol, 241
 		PUSH S3
 		SHA256U
 		PUSH S7
@@ -1050,7 +1108,7 @@ PUSHCONT {
 		CTOS
 		SHA256U
 		POP S7
-		.loc TestContract.tsol, 225
+		.loc TestContract.tsol, 242
 		PUSH S3
 		SHA256U
 		PUSH S4
@@ -1072,10 +1130,10 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 227
+	.loc TestContract.tsol, 244
 	GTINT 0
 	PUSHCONT {
-		.loc TestContract.tsol, 228
+		.loc TestContract.tsol, 245
 		PUSH S2
 		LDREFRTOS
 		NIP
@@ -1083,7 +1141,7 @@ PUSHCONT {
 		.loc TestContract.tsol, 0
 	}
 	IF
-	.loc TestContract.tsol, 219
+	.loc TestContract.tsol, 236
 	INC
 	.loc TestContract.tsol, 0
 }

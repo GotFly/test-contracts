@@ -1,5 +1,19 @@
 pragma ton-solidity >= 0.70.0;
 
+//   _srcChainId (uint64): 20001     
+//   _dstChainId (uint64): 30001
+//   _srcAddress (uint256): 80472027866109562603403326356647880809847083680350321921350924448317883402401
+//   _dstAddress (uint256): 80472027866109562603403326356647880809847083680350321921350924448317883402402
+//   _txId (uint256): 80472027866109562603403326356647880809847083680350321921350924448317883402405
+//   _dstAddressUint (uint256): 80472027866109562603403326356647880809847083680350321921350924448317883402403
+//   _amount (uint256): 100000000
+//   _decimals (uint8): 6
+//   _param1 (bytes): 71C7656EC7ab88b098defB751B7401B5f6d8976F
+
+
+// te6ccgEBAwEA7QAB4AAAAAAAAE4hAAAAAAAAdTGx6Y2/MVBNzx9to7boCsn3yhVdckz1vjKHzsd5uf3IobHpjb8xUE3PH22jtugKyffKFV1yTPW+MofOx3m5/ciisemNvzFQTc8fbaO26ArJ98oVXXJM9b4yh87Hebn9yKUBAcKx6Y2/MVBNzx9to7boCsn3yhVdckz1vjKHzsd5uf3IowAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF9eEAsemNvzFQTc8fbaO26ArJ98oVXXJM9b4yh87Hebn9yKUGAgAoccdlbseriLCY3vt1G3QBtfbYl28=
+
+
 /// Asterizm nonce contract
 contract TestContract {
 
@@ -10,7 +24,7 @@ contract TestContract {
     event GetStepEvent(uint _i, bytes _chunk, uint _hash);
 
     event GetLoopEvent(string _mark, uint _i, uint16 _bits, bytes _data);
-
+    event GetCellEvent(string _mark, TvmCell _cell);
     event GetChunkEvent(uint _length, bytes _chunk);
 
     event GetHashEvent(uint _hash);
@@ -134,7 +148,7 @@ contract TestContract {
         uint16 payloadDepth = payloadSlice.depth();
 
         bytes chunk = "";
-        for (uint i = 0; i <= payloadDepth; i++) {   
+        for (uint i = 0; i <= payloadDepth; i++) {
             uint8 r = payloadSlice.refs();
             uint16 b = payloadSlice.bits();
             // Main tree
@@ -174,10 +188,19 @@ contract TestContract {
         TvmSlice payloadSlice = encodedSlice.loadRefAsSlice();
         uint16 payloadDepth = payloadSlice.depth();
 
+        emit GetPayloadEvent("Payload from ref", bytes(payloadSlice));
+        emit GetDepthtEvent("Payload depth", payloadDepth);
+
+        emit GetCellEvent("Payload cell", encodedCell);
+
         bytes chunk = "";
         for (uint i = 0; i <= payloadDepth; i++) {   
             uint8 r = payloadSlice.refs();
             uint16 b = payloadSlice.bits();
+            // Main tree
+            if (b > 0) {
+                chunk.append(bytes(payloadSlice)[0:b / 8]);
+            }
             // Nested refs
             if (r > 1) {
                 for (uint2 j = 1; j < r; j++) {   
@@ -200,10 +223,7 @@ contract TestContract {
                     }
                 }
             }
-            // Main tree
-            if (b > 0) {
-                chunk.append(bytes(payloadSlice)[0:b / 8]);
-            }
+            emit GetChunkEvent(chunk.length, chunk);
             if (r > 0) {
                 payloadSlice = payloadSlice.loadRefAsSlice();
             }

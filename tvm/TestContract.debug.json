@@ -1,4 +1,178 @@
 {
+  "0341212f4aa6d80404056c08e1bf0c081ef17824a2d7d03915ca985f73ea58a9": {
+    "0": {
+      "filename": "./TestContract.code",
+      "line": 1244
+    },
+    "16": {
+      "filename": "./TestContract.code",
+      "line": 1245
+    },
+    "24": {
+      "filename": "./TestContract.code",
+      "line": 1246
+    },
+    "40": {
+      "filename": "./TestContract.code",
+      "line": 1247
+    },
+    "56": {
+      "filename": "./TestContract.code",
+      "line": 1248
+    },
+    "72": {
+      "filename": "./TestContract.code",
+      "line": 1249
+    },
+    "80": {
+      "filename": "./TestContract.code",
+      "line": 1250
+    },
+    "96": {
+      "filename": "./TestContract.code",
+      "line": 1253
+    },
+    "112": {
+      "filename": "./TestContract.code",
+      "line": 1254
+    },
+    "120": {
+      "filename": "./TestContract.code",
+      "line": 1255
+    },
+    "136": {
+      "filename": "./TestContract.code",
+      "line": 1256
+    },
+    "152": {
+      "filename": "./TestContract.code",
+      "line": 1257
+    },
+    "168": {
+      "filename": "./TestContract.code",
+      "line": 1258
+    },
+    "176": {
+      "filename": "./TestContract.code",
+      "line": 1259
+    },
+    "192": {
+      "filename": "./TestContract.code",
+      "line": 1260
+    },
+    "200": {
+      "filename": "./TestContract.code",
+      "line": 1261
+    },
+    "208": {
+      "filename": "./TestContract.code",
+      "line": 1262
+    },
+    "216": {
+      "filename": "./TestContract.code",
+      "line": 1263
+    },
+    "224": {
+      "filename": "./TestContract.code",
+      "line": 1264
+    },
+    "240": {
+      "filename": "./TestContract.code",
+      "line": 1265
+    },
+    "248": {
+      "filename": "./TestContract.code",
+      "line": 1266
+    },
+    "264": {
+      "filename": "./TestContract.code",
+      "line": 1267
+    },
+    "280": {
+      "filename": "./TestContract.code",
+      "line": 1268
+    },
+    "296": {
+      "filename": "./TestContract.code",
+      "line": 1270
+    },
+    "304": {
+      "filename": "./TestContract.code",
+      "line": 1271
+    },
+    "320": {
+      "filename": "./TestContract.code",
+      "line": 1272
+    },
+    "328": {
+      "filename": "stdlib.sol",
+      "line": 61
+    },
+    "344": {
+      "filename": "stdlib.sol",
+      "line": 61
+    },
+    "352": {
+      "filename": "stdlib.sol",
+      "line": 61
+    },
+    "360": {
+      "filename": "stdlib.sol",
+      "line": 61
+    },
+    "376": {
+      "filename": "stdlib.sol",
+      "line": 62
+    },
+    "384": {
+      "filename": "stdlib.sol",
+      "line": 62
+    },
+    "400": {
+      "filename": "stdlib.sol",
+      "line": 62
+    },
+    "424": {
+      "filename": "stdlib.sol",
+      "line": 62
+    },
+    "432": {
+      "filename": "stdlib.sol",
+      "line": 62
+    },
+    "472": {
+      "filename": "stdlib.sol",
+      "line": 62
+    },
+    "480": {
+      "filename": "stdlib.sol",
+      "line": 62
+    },
+    "488": {
+      "filename": "stdlib.sol",
+      "line": 62
+    },
+    "504": {
+      "filename": "stdlib.sol",
+      "line": 63
+    },
+    "520": {
+      "filename": "./TestContract.code",
+      "line": 1274
+    },
+    "536": {
+      "filename": "./TestContract.code",
+      "line": 1275
+    },
+    "544": {
+      "filename": "./TestContract.code",
+      "line": 1276
+    },
+    "560": {
+      "filename": "./TestContract.code",
+      "line": 1279
+    }
+  },
   "0c6d676eadd7ee8b6a14d54427d7b901c5cf0890d7be69a5e4f22895c4ccd74f": {
     "0": {
       "filename": "stdlib.sol",
@@ -228,131 +402,131 @@
   "28816b26e8b569f5603de75ac4384ec5826cd2f8632a8eca054ca7b422bff62e": {
     "0": {
       "filename": "TestContract.tsol",
-      "line": 131
+      "line": 142
     },
     "8": {
       "filename": "TestContract.tsol",
-      "line": 132
+      "line": 143
     },
     "16": {
       "filename": "TestContract.tsol",
-      "line": 132
+      "line": 143
     },
     "32": {
       "filename": "TestContract.tsol",
-      "line": 133
+      "line": 144
     },
     "40": {
       "filename": "TestContract.tsol",
-      "line": 133
+      "line": 144
     },
     "48": {
       "filename": "TestContract.tsol",
-      "line": 133
+      "line": 144
     },
     "56": {
       "filename": "TestContract.tsol",
-      "line": 134
+      "line": 145
     },
     "64": {
       "filename": "TestContract.tsol",
-      "line": 134
+      "line": 145
     },
     "80": {
       "filename": "TestContract.tsol",
-      "line": 136
+      "line": 147
     },
     "88": {
       "filename": "TestContract.tsol",
-      "line": 137
+      "line": 148
     },
     "96": {
       "filename": "TestContract.tsol",
-      "line": 137
+      "line": 148
     },
     "104": {
       "filename": "TestContract.tsol",
-      "line": 137
+      "line": 148
     },
     "120": {
       "filename": "TestContract.tsol",
-      "line": 137
+      "line": 148
     },
     "128": {
       "filename": "TestContract.tsol",
-      "line": 137
+      "line": 148
     },
     "144": {
       "filename": "TestContract.tsol",
-      "line": 138
+      "line": 149
     },
     "152": {
       "filename": "TestContract.tsol",
-      "line": 138
+      "line": 149
     },
     "168": {
       "filename": "TestContract.tsol",
-      "line": 139
+      "line": 150
     },
     "176": {
       "filename": "TestContract.tsol",
-      "line": 139
+      "line": 150
     },
     "192": {
       "filename": "TestContract.tsol",
-      "line": 141
+      "line": 152
     },
     "200": {
       "filename": "TestContract.tsol",
-      "line": 141
+      "line": 152
     },
     "216": {
       "filename": "TestContract.tsol",
-      "line": 141
+      "line": 152
     },
     "232": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "248": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "256": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "264": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "272": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "280": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "288": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "304": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "312": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "328": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "344": {
       "filename": "TestContract.tsol",
-      "line": 142
+      "line": 153
     },
     "352": {
       "filename": "./TestContract.code",
@@ -360,31 +534,31 @@
     },
     "360": {
       "filename": "TestContract.tsol",
-      "line": 144
+      "line": 155
     },
     "368": {
       "filename": "TestContract.tsol",
-      "line": 144
+      "line": 155
     },
     "384": {
       "filename": "TestContract.tsol",
-      "line": 144
+      "line": 155
     },
     "392": {
       "filename": "TestContract.tsol",
-      "line": 145
+      "line": 156
     },
     "400": {
       "filename": "TestContract.tsol",
-      "line": 145
+      "line": 156
     },
     "408": {
       "filename": "TestContract.tsol",
-      "line": 145
+      "line": 156
     },
     "416": {
       "filename": "TestContract.tsol",
-      "line": 145
+      "line": 156
     },
     "424": {
       "filename": "./TestContract.code",
@@ -392,7 +566,7 @@
     },
     "432": {
       "filename": "TestContract.tsol",
-      "line": 137
+      "line": 148
     },
     "440": {
       "filename": "./TestContract.code",
@@ -404,287 +578,259 @@
     },
     "456": {
       "filename": "TestContract.tsol",
-      "line": 149
+      "line": 160
     },
     "464": {
       "filename": "TestContract.tsol",
-      "line": 150
+      "line": 161
     },
     "472": {
       "filename": "TestContract.tsol",
-      "line": 150
+      "line": 161
     },
     "488": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
+    }
+  },
+  "3ac7c5c02a834deb7ac0ef9a8923634be6eaae99e17c37b0500b79c1429431cd": {
+    "0": {
+      "filename": "./TestContract.code",
+      "line": 1212
+    },
+    "16": {
+      "filename": "./TestContract.code",
+      "line": 1213
+    },
+    "24": {
+      "filename": "./TestContract.code",
+      "line": 1214
+    },
+    "40": {
+      "filename": "./TestContract.code",
+      "line": 1215
+    },
+    "56": {
+      "filename": "./TestContract.code",
+      "line": 1216
+    },
+    "72": {
+      "filename": "./TestContract.code",
+      "line": 1217
+    },
+    "80": {
+      "filename": "./TestContract.code",
+      "line": 1218
+    },
+    "88": {
+      "filename": "./TestContract.code",
+      "line": 1219
+    },
+    "112": {
+      "filename": "./TestContract.code",
+      "line": 1220
+    },
+    "136": {
+      "filename": "./TestContract.code",
+      "line": 1221
+    },
+    "144": {
+      "filename": "./TestContract.code",
+      "line": 1222
+    },
+    "152": {
+      "filename": "./TestContract.code",
+      "line": 1223
+    },
+    "168": {
+      "filename": "./TestContract.code",
+      "line": 1224
+    },
+    "184": {
+      "filename": "./TestContract.code",
+      "line": 1228
+    },
+    "192": {
+      "filename": "./TestContract.code",
+      "line": 1229
+    },
+    "216": {
+      "filename": "./TestContract.code",
+      "line": 1230
+    },
+    "232": {
+      "filename": "./TestContract.code",
+      "line": 1231
+    },
+    "240": {
+      "filename": "./TestContract.code",
+      "line": 1232
+    },
+    "256": {
+      "filename": "./TestContract.code",
+      "line": 1236
+    },
+    "264": {
+      "filename": "./TestContract.code",
+      "line": 1237
+    },
+    "280": {
+      "filename": "./TestContract.code",
+      "line": 1240
     }
   },
   "3f1a7734c637572872c1616847936d667abe8965feba376f51b4739974152229": {
     "0": {
       "filename": "TestContract.tsol",
-      "line": 26
+      "line": 37
     },
     "16": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "32": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "48": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "56": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "64": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "80": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "96": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "112": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "128": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "136": {
       "filename": "TestContract.tsol",
-      "line": 27
+      "line": 38
     },
     "144": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "152": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "160": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "168": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "176": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "192": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "208": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "216": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "232": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "248": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "264": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "280": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "296": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "304": {
       "filename": "TestContract.tsol",
-      "line": 28
+      "line": 39
     },
     "312": {
       "filename": "TestContract.tsol",
-      "line": 29
+      "line": 40
     },
     "328": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "344": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "352": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "360": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "520": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "528": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "536": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "552": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "568": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "584": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "592": {
       "filename": "TestContract.tsol",
-      "line": 31
+      "line": 42
     },
     "600": {
       "filename": "TestContract.tsol",
-      "line": 31
-    }
-  },
-  "40ec7a33bf7c4ed65555cb69b7925411cd1c0f072e876511422ae2259d4b9c06": {
-    "0": {
-      "filename": "./TestContract.code",
-      "line": 20
-    },
-    "8": {
-      "filename": "./TestContract.code",
-      "line": 21
-    },
-    "24": {
-      "filename": "./TestContract.code",
-      "line": 22
-    },
-    "48": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "56": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "64": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "80": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "96": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "104": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "112": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "120": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "128": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "144": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "160": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "168": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "184": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "200": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "216": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "224": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "232": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "240": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "256": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "272": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "288": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "296": {
-      "filename": "TestContract.tsol",
-      "line": 17
-    },
-    "304": {
-      "filename": "./TestContract.code",
-      "line": 49
-    },
-    "320": {
-      "filename": "./TestContract.code",
-      "line": 52
-    },
-    "336": {
-      "filename": "./TestContract.code",
-      "line": 55
+      "line": 42
     }
   },
   "42aa676d16d19f95a85a3a8f6b8578c96167a12005f5a454dcdc62d5181d3cf4": {
@@ -744,95 +890,95 @@
     },
     "48": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "56": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "64": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "80": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "96": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "104": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "112": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "120": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "128": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "144": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "160": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "168": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "184": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "200": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "216": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "224": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "232": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "240": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "256": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "272": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "288": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "296": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "312": {
       "filename": "TestContract.tsol",
-      "line": 25
+      "line": 36
     },
     "320": {
       "filename": "./TestContract.code",
@@ -850,7 +996,13 @@
   "4ede8e6e9f5707fa37852bf27c6811647943685fda6454b874600571944b648d": {
     "0": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
+    }
+  },
+  "4f937cb9bff596316f25cd095b77a5e8b653ad57b27b9a75494d85c8d8d7d7fa": {
+    "0": {
+      "filename": "TestContract.tsol",
+      "line": 188
     }
   },
   "5a13e2fc4b98dbba94f0abd28c23f31731c2d03d8c0a09b8f130b0c0c06922b6": {
@@ -946,291 +1098,87 @@
   "60488e96384d55db5809d3be340ce676908c99e02e0f6a89a307f1376c1ceb17": {
     "0": {
       "filename": "./TestContract.code",
-      "line": 1128
+      "line": 1186
     },
     "16": {
       "filename": "./TestContract.code",
-      "line": 1129
+      "line": 1187
     },
     "32": {
       "filename": "./TestContract.code",
-      "line": 1130
+      "line": 1188
     },
     "40": {
       "filename": "./TestContract.code",
-      "line": 1131
+      "line": 1189
     },
     "56": {
       "filename": "./TestContract.code",
-      "line": 1132
+      "line": 1190
     },
     "72": {
       "filename": "./TestContract.code",
-      "line": 1133
+      "line": 1191
     },
     "88": {
       "filename": "./TestContract.code",
-      "line": 1134
+      "line": 1192
     },
     "96": {
       "filename": "./TestContract.code",
-      "line": 1135
+      "line": 1193
+    }
+  },
+  "64a122b66a8026354337f925fb662ce3076c5a43556bb52c295399fbba262c9d": {
+    "0": {
+      "filename": "<entry-selector>",
+      "line": 1
+    },
+    "8": {
+      "filename": "<entry-selector>",
+      "line": 2
+    },
+    "24": {
+      "filename": "<entry-selector>",
+      "line": 3
+    },
+    "32": {
+      "filename": "<entry-selector>",
+      "line": 4
+    },
+    "48": {
+      "filename": "<entry-selector>",
+      "line": 5
+    },
+    "56": {
+      "filename": "<entry-selector>",
+      "line": 6
+    },
+    "72": {
+      "filename": "<entry-selector>",
+      "line": 7
+    },
+    "88": {
+      "filename": "<entry-selector>",
+      "line": 8
+    },
+    "96": {
+      "filename": "<entry-selector>",
+      "line": 9
+    },
+    "112": {
+      "filename": "<entry-selector>",
+      "line": 10
+    },
+    "128": {
+      "filename": "<entry-selector>",
+      "line": 11
     }
   },
   "65c88c24ece4eedb3cc0bccde6ea493b3fe5f30468e8390f37deaa2230ee6228": {
     "0": {
       "filename": "TestContract.tsol",
-      "line": 152
-    }
-  },
-  "75119f3afdfa171fe349e4a0be0d0d8d3bcfe27f78cc981fb04d6d72c7efc18d": {
-    "0": {
-      "filename": "TestContract.tsol",
-      "line": 172
-    },
-    "8": {
-      "filename": "TestContract.tsol",
-      "line": 173
-    },
-    "16": {
-      "filename": "TestContract.tsol",
-      "line": 173
-    },
-    "32": {
-      "filename": "TestContract.tsol",
-      "line": 174
-    },
-    "40": {
-      "filename": "TestContract.tsol",
-      "line": 174
-    },
-    "48": {
-      "filename": "TestContract.tsol",
-      "line": 174
-    },
-    "56": {
-      "filename": "TestContract.tsol",
-      "line": 175
-    },
-    "64": {
-      "filename": "TestContract.tsol",
-      "line": 175
-    },
-    "80": {
-      "filename": "TestContract.tsol",
-      "line": 177
-    },
-    "88": {
-      "filename": "TestContract.tsol",
-      "line": 178
-    },
-    "96": {
-      "filename": "TestContract.tsol",
-      "line": 178
-    },
-    "104": {
-      "filename": "TestContract.tsol",
-      "line": 178
-    },
-    "120": {
-      "filename": "TestContract.tsol",
-      "line": 178
-    },
-    "128": {
-      "filename": "TestContract.tsol",
-      "line": 178
-    },
-    "144": {
-      "filename": "TestContract.tsol",
-      "line": 179
-    },
-    "152": {
-      "filename": "TestContract.tsol",
-      "line": 179
-    },
-    "168": {
-      "filename": "TestContract.tsol",
-      "line": 180
-    },
-    "176": {
-      "filename": "TestContract.tsol",
-      "line": 180
-    },
-    "192": {
-      "filename": "TestContract.tsol",
-      "line": 204
-    },
-    "200": {
-      "filename": "TestContract.tsol",
-      "line": 204
-    },
-    "216": {
-      "filename": "TestContract.tsol",
-      "line": 204
-    },
-    "232": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "248": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "256": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "264": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "272": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "280": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "288": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "304": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "312": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "328": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "344": {
-      "filename": "TestContract.tsol",
-      "line": 205
-    },
-    "352": {
-      "filename": "./TestContract.code",
-      "line": 955
-    },
-    "360": {
-      "filename": "TestContract.tsol",
-      "line": 207
-    },
-    "368": {
-      "filename": "TestContract.tsol",
-      "line": 207
-    },
-    "384": {
-      "filename": "TestContract.tsol",
-      "line": 207
-    },
-    "392": {
-      "filename": "TestContract.tsol",
-      "line": 208
-    },
-    "400": {
-      "filename": "TestContract.tsol",
-      "line": 208
-    },
-    "408": {
-      "filename": "TestContract.tsol",
-      "line": 208
-    },
-    "416": {
-      "filename": "TestContract.tsol",
-      "line": 208
-    },
-    "424": {
-      "filename": "./TestContract.code",
-      "line": 967
-    },
-    "432": {
-      "filename": "TestContract.tsol",
-      "line": 178
-    },
-    "440": {
-      "filename": "./TestContract.code",
-      "line": 972
-    },
-    "448": {
-      "filename": "./TestContract.code",
-      "line": 973
-    },
-    "456": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "472": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "488": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "504": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "512": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "520": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "536": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "696": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "704": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "712": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "728": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "736": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "744": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "752": {
-      "filename": "TestContract.tsol",
-      "line": 212
-    },
-    "768": {
-      "filename": "TestContract.tsol",
-      "line": 214
-    },
-    "776": {
-      "filename": "TestContract.tsol",
-      "line": 215
-    },
-    "784": {
-      "filename": "TestContract.tsol",
-      "line": 215
-    },
-    "800": {
-      "filename": "TestContract.tsol",
-      "line": 217
+      "line": 163
     }
   },
   "7a761971934460e81f308265d53ddbbfcdef855b914e8a91f65ac86461728a6e": {
@@ -1494,387 +1442,151 @@
   "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7": {
     "0": {
       "filename": "TestContract.tsol",
-      "line": 136
+      "line": 147
     }
   },
-  "a91618dc2a94cee01664d6a3827df72a9d7481447f3047beeaafcffdfa39d5db": {
+  "a91a98471ffdd26550ba2fc02fae6915710197f2a231bd2babb6ef6088533ddd": {
     "0": {
-      "filename": "./TestContract.code",
-      "line": 1186
-    },
-    "16": {
-      "filename": "./TestContract.code",
-      "line": 1187
-    },
-    "24": {
-      "filename": "./TestContract.code",
-      "line": 1188
-    },
-    "40": {
-      "filename": "./TestContract.code",
-      "line": 1189
-    },
-    "56": {
-      "filename": "./TestContract.code",
-      "line": 1190
-    },
-    "72": {
-      "filename": "./TestContract.code",
-      "line": 1191
-    },
-    "80": {
-      "filename": "./TestContract.code",
-      "line": 1192
-    },
-    "96": {
-      "filename": "./TestContract.code",
-      "line": 1195
-    },
-    "112": {
-      "filename": "./TestContract.code",
-      "line": 1196
-    },
-    "120": {
-      "filename": "./TestContract.code",
-      "line": 1197
-    },
-    "136": {
-      "filename": "./TestContract.code",
-      "line": 1198
-    },
-    "152": {
-      "filename": "./TestContract.code",
-      "line": 1199
-    },
-    "168": {
-      "filename": "./TestContract.code",
-      "line": 1200
-    },
-    "176": {
-      "filename": "./TestContract.code",
-      "line": 1201
-    },
-    "192": {
-      "filename": "./TestContract.code",
-      "line": 1202
-    },
-    "200": {
-      "filename": "./TestContract.code",
-      "line": 1203
-    },
-    "208": {
-      "filename": "./TestContract.code",
-      "line": 1204
-    },
-    "216": {
-      "filename": "./TestContract.code",
-      "line": 1205
-    },
-    "224": {
-      "filename": "./TestContract.code",
-      "line": 1206
-    },
-    "240": {
-      "filename": "./TestContract.code",
-      "line": 1207
-    },
-    "248": {
-      "filename": "./TestContract.code",
-      "line": 1208
-    },
-    "264": {
-      "filename": "./TestContract.code",
-      "line": 1209
-    },
-    "280": {
-      "filename": "./TestContract.code",
-      "line": 1210
-    },
-    "296": {
-      "filename": "./TestContract.code",
-      "line": 1212
-    },
-    "304": {
-      "filename": "./TestContract.code",
-      "line": 1213
-    },
-    "320": {
-      "filename": "./TestContract.code",
-      "line": 1214
-    },
-    "328": {
-      "filename": "stdlib.sol",
-      "line": 61
-    },
-    "344": {
-      "filename": "stdlib.sol",
-      "line": 61
-    },
-    "352": {
-      "filename": "stdlib.sol",
-      "line": 61
-    },
-    "360": {
-      "filename": "stdlib.sol",
-      "line": 61
-    },
-    "376": {
-      "filename": "stdlib.sol",
-      "line": 62
-    },
-    "384": {
-      "filename": "stdlib.sol",
-      "line": 62
-    },
-    "400": {
-      "filename": "stdlib.sol",
-      "line": 62
-    },
-    "424": {
-      "filename": "stdlib.sol",
-      "line": 62
-    },
-    "432": {
-      "filename": "stdlib.sol",
-      "line": 62
-    },
-    "472": {
-      "filename": "stdlib.sol",
-      "line": 62
-    },
-    "480": {
-      "filename": "stdlib.sol",
-      "line": 62
-    },
-    "488": {
-      "filename": "stdlib.sol",
-      "line": 62
-    },
-    "504": {
-      "filename": "stdlib.sol",
-      "line": 63
-    },
-    "520": {
-      "filename": "./TestContract.code",
-      "line": 1216
-    },
-    "536": {
-      "filename": "./TestContract.code",
-      "line": 1217
-    },
-    "544": {
-      "filename": "./TestContract.code",
-      "line": 1218
-    },
-    "560": {
-      "filename": "./TestContract.code",
-      "line": 1221
+      "filename": "TestContract.tsol",
+      "line": 189
     }
   },
   "acfd949a7581caca81c2c30a758e8f9a07cb61792514fd573a26fd29fce87f1f": {
     "0": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     }
   },
-  "b235cdd26056359822ed6bc9b0d6eab893e0c194f2cd40f6dcda5917145bf0a2": {
+  "b0004714da71a387d474fa92a4d2ef49cfa6f520b9b6e3f06da911ca92dadd81": {
     "0": {
       "filename": "TestContract.tsol",
-      "line": 18
+      "line": 232
     },
     "16": {
       "filename": "TestContract.tsol",
-      "line": 19
+      "line": 234
+    },
+    "24": {
+      "filename": "TestContract.tsol",
+      "line": 234
     },
     "32": {
       "filename": "TestContract.tsol",
-      "line": 19
-    },
-    "40": {
-      "filename": "TestContract.tsol",
-      "line": 19
-    },
-    "56": {
-      "filename": "TestContract.tsol",
-      "line": 19
-    },
-    "64": {
-      "filename": "TestContract.tsol",
-      "line": 19
-    },
-    "80": {
-      "filename": "TestContract.tsol",
-      "line": 19
-    },
-    "88": {
-      "filename": "TestContract.tsol",
-      "line": 19
-    },
-    "104": {
-      "filename": "TestContract.tsol",
-      "line": 19
-    },
-    "120": {
-      "filename": "TestContract.tsol",
-      "line": 19
-    },
-    "136": {
-      "filename": "TestContract.tsol",
-      "line": 19
-    },
-    "144": {
-      "filename": "TestContract.tsol",
-      "line": 20
-    },
-    "152": {
-      "filename": "TestContract.tsol",
-      "line": 20
-    },
-    "160": {
-      "filename": "TestContract.tsol",
-      "line": 20
-    },
-    "168": {
-      "filename": "TestContract.tsol",
-      "line": 20
-    },
-    "176": {
-      "filename": "TestContract.tsol",
-      "line": 20
+      "line": 234
     },
     "192": {
       "filename": "TestContract.tsol",
-      "line": 20
+      "line": 234
     },
     "200": {
       "filename": "TestContract.tsol",
-      "line": 20
+      "line": 234
+    },
+    "208": {
+      "filename": "TestContract.tsol",
+      "line": 234
     },
     "216": {
       "filename": "TestContract.tsol",
-      "line": 20
+      "line": 234
     },
     "232": {
       "filename": "TestContract.tsol",
-      "line": 20
+      "line": 234
+    },
+    "240": {
+      "filename": "TestContract.tsol",
+      "line": 234
     },
     "248": {
       "filename": "TestContract.tsol",
-      "line": 20
+      "line": 234
     },
     "264": {
       "filename": "TestContract.tsol",
-      "line": 20
+      "line": 236
+    },
+    "272": {
+      "filename": "TestContract.tsol",
+      "line": 236
     },
     "280": {
       "filename": "TestContract.tsol",
-      "line": 20
-    },
-    "288": {
-      "filename": "TestContract.tsol",
-      "line": 20
+      "line": 236
     },
     "296": {
       "filename": "TestContract.tsol",
-      "line": 21
-    },
-    "312": {
-      "filename": "TestContract.tsol",
-      "line": 21
-    },
-    "472": {
-      "filename": "TestContract.tsol",
-      "line": 21
-    },
-    "480": {
-      "filename": "TestContract.tsol",
-      "line": 21
-    },
-    "488": {
-      "filename": "TestContract.tsol",
-      "line": 21
-    },
-    "504": {
-      "filename": "TestContract.tsol",
-      "line": 21
-    },
-    "512": {
-      "filename": "TestContract.tsol",
-      "line": 21
-    },
-    "520": {
-      "filename": "TestContract.tsol",
-      "line": 21
+      "line": 236
     }
   },
   "b6f27d187f26bd046272f9f471e9ae01f051b960e654874ac3fb0749c691c4c6": {
     "0": {
       "filename": "./TestContract.code",
-      "line": 1106
+      "line": 1164
     },
     "16": {
       "filename": "./TestContract.code",
-      "line": 1107
+      "line": 1165
     },
     "24": {
       "filename": "./TestContract.code",
-      "line": 1108
+      "line": 1166
     },
     "40": {
       "filename": "./TestContract.code",
-      "line": 1109
+      "line": 1167
     },
     "56": {
       "filename": "./TestContract.code",
-      "line": 1110
+      "line": 1168
     },
     "72": {
       "filename": "./TestContract.code",
-      "line": 1111
+      "line": 1169
     },
     "80": {
       "filename": "./TestContract.code",
-      "line": 1112
+      "line": 1170
     },
     "96": {
       "filename": "./TestContract.code",
-      "line": 1113
+      "line": 1171
     },
     "104": {
       "filename": "./TestContract.code",
-      "line": 1114
+      "line": 1172
     },
     "120": {
       "filename": "./TestContract.code",
-      "line": 1115
+      "line": 1173
     },
     "136": {
       "filename": "./TestContract.code",
-      "line": 1116
+      "line": 1174
     },
     "152": {
       "filename": "./TestContract.code",
-      "line": 1117
+      "line": 1175
     },
     "168": {
       "filename": "./TestContract.code",
-      "line": 1118
+      "line": 1176
     },
     "192": {
       "filename": "./TestContract.code",
-      "line": 1119
+      "line": 1177
     },
     "208": {
       "filename": "./TestContract.code",
-      "line": 1120
+      "line": 1178
     },
     "216": {
       "filename": "./TestContract.code",
-      "line": 1121
+      "line": 1179
     },
     "232": {
       "filename": "./TestContract.code",
-      "line": 1123
+      "line": 1181
     }
   },
   "c8bb6e4b551c2a78fe557a4a73be40aad6a3dd084230803e3f4242a6a717f994": {
@@ -1965,288 +1677,604 @@
       "line": 3
     }
   },
-  "d23385b779715fd98b65fb1a28f13df799679f323f71a57641493efa2312f0ed": {
+  "cd4b77b00037d7831472bcbfb924c46b4e0f5b8996e387fae9090b991673ee85": {
     "0": {
-      "filename": "./TestContract.code",
-      "line": 1154
+      "filename": "TestContract.tsol",
+      "line": 193
+    },
+    "8": {
+      "filename": "TestContract.tsol",
+      "line": 194
     },
     "16": {
-      "filename": "./TestContract.code",
-      "line": 1155
+      "filename": "TestContract.tsol",
+      "line": 194
     },
     "24": {
-      "filename": "./TestContract.code",
-      "line": 1156
+      "filename": "TestContract.tsol",
+      "line": 194
     },
     "40": {
-      "filename": "./TestContract.code",
-      "line": 1157
+      "filename": "TestContract.tsol",
+      "line": 194
     },
-    "56": {
-      "filename": "./TestContract.code",
-      "line": 1158
+    "48": {
+      "filename": "TestContract.tsol",
+      "line": 194
+    },
+    "64": {
+      "filename": "TestContract.tsol",
+      "line": 195
     },
     "72": {
-      "filename": "./TestContract.code",
-      "line": 1159
-    },
-    "80": {
-      "filename": "./TestContract.code",
-      "line": 1160
+      "filename": "TestContract.tsol",
+      "line": 195
     },
     "88": {
-      "filename": "./TestContract.code",
-      "line": 1161
+      "filename": "TestContract.tsol",
+      "line": 196
+    },
+    "96": {
+      "filename": "TestContract.tsol",
+      "line": 196
     },
     "112": {
-      "filename": "./TestContract.code",
-      "line": 1162
+      "filename": "TestContract.tsol",
+      "line": 220
+    },
+    "120": {
+      "filename": "TestContract.tsol",
+      "line": 220
     },
     "136": {
-      "filename": "./TestContract.code",
-      "line": 1163
-    },
-    "144": {
-      "filename": "./TestContract.code",
-      "line": 1164
+      "filename": "TestContract.tsol",
+      "line": 220
     },
     "152": {
-      "filename": "./TestContract.code",
-      "line": 1165
+      "filename": "TestContract.tsol",
+      "line": 221
     },
     "168": {
-      "filename": "./TestContract.code",
-      "line": 1166
+      "filename": "TestContract.tsol",
+      "line": 221
+    },
+    "176": {
+      "filename": "TestContract.tsol",
+      "line": 221
     },
     "184": {
-      "filename": "./TestContract.code",
-      "line": 1170
+      "filename": "TestContract.tsol",
+      "line": 221
     },
     "192": {
-      "filename": "./TestContract.code",
-      "line": 1171
+      "filename": "TestContract.tsol",
+      "line": 221
     },
-    "216": {
-      "filename": "./TestContract.code",
-      "line": 1172
+    "200": {
+      "filename": "TestContract.tsol",
+      "line": 221
+    },
+    "208": {
+      "filename": "TestContract.tsol",
+      "line": 221
+    },
+    "224": {
+      "filename": "TestContract.tsol",
+      "line": 221
     },
     "232": {
-      "filename": "./TestContract.code",
-      "line": 1173
+      "filename": "TestContract.tsol",
+      "line": 221
     },
-    "240": {
-      "filename": "./TestContract.code",
-      "line": 1174
-    },
-    "256": {
-      "filename": "./TestContract.code",
-      "line": 1178
+    "248": {
+      "filename": "TestContract.tsol",
+      "line": 221
     },
     "264": {
+      "filename": "TestContract.tsol",
+      "line": 221
+    },
+    "272": {
       "filename": "./TestContract.code",
-      "line": 1179
+      "line": 998
     },
     "280": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "288": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "304": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "320": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "336": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "344": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "352": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "368": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "528": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "536": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "544": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "560": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "568": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "576": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "584": {
+      "filename": "TestContract.tsol",
+      "line": 223
+    },
+    "600": {
+      "filename": "TestContract.tsol",
+      "line": 224
+    },
+    "616": {
+      "filename": "TestContract.tsol",
+      "line": 224
+    },
+    "624": {
+      "filename": "TestContract.tsol",
+      "line": 225
+    },
+    "632": {
+      "filename": "TestContract.tsol",
+      "line": 225
+    },
+    "640": {
+      "filename": "TestContract.tsol",
+      "line": 225
+    },
+    "648": {
+      "filename": "TestContract.tsol",
+      "line": 225
+    },
+    "656": {
       "filename": "./TestContract.code",
-      "line": 1182
+      "line": 1025
+    },
+    "664": {
+      "filename": "TestContract.tsol",
+      "line": 194
+    },
+    "672": {
+      "filename": "./TestContract.code",
+      "line": 1030
+    },
+    "680": {
+      "filename": "./TestContract.code",
+      "line": 1031
+    },
+    "688": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "704": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "720": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "736": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "744": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "752": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "768": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "928": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "936": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "944": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "960": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "968": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "976": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "984": {
+      "filename": "TestContract.tsol",
+      "line": 229
+    },
+    "1000": {
+      "filename": "TestContract.tsol",
+      "line": 231
+    },
+    "1008": {
+      "filename": "TestContract.tsol",
+      "line": 232
+    }
+  },
+  "d1e75782f78d2f937c85f4524e23e58540ab86d32bdaf5aa8dd47f09302275e2": {
+    "0": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    }
+  },
+  "dee70a160d57b42173b433e9ec8893a0af5f196476940685128025038874ac35": {
+    "0": {
+      "filename": "TestContract.tsol",
+      "line": 29
+    },
+    "16": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "32": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "40": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "56": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "64": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "80": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "88": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "104": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "120": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "136": {
+      "filename": "TestContract.tsol",
+      "line": 30
+    },
+    "144": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "152": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "160": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "168": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "176": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "192": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "200": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "216": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "232": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "248": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "264": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "280": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "288": {
+      "filename": "TestContract.tsol",
+      "line": 31
+    },
+    "296": {
+      "filename": "TestContract.tsol",
+      "line": 32
+    },
+    "312": {
+      "filename": "TestContract.tsol",
+      "line": 32
+    },
+    "472": {
+      "filename": "TestContract.tsol",
+      "line": 32
+    },
+    "480": {
+      "filename": "TestContract.tsol",
+      "line": 32
+    },
+    "488": {
+      "filename": "TestContract.tsol",
+      "line": 32
+    },
+    "504": {
+      "filename": "TestContract.tsol",
+      "line": 32
+    },
+    "512": {
+      "filename": "TestContract.tsol",
+      "line": 32
+    },
+    "520": {
+      "filename": "TestContract.tsol",
+      "line": 32
     }
   },
   "e0325059027bf73fbeb4148feda3fa0901b23b316ae4b304a4f3d60fab381471": {
     "0": {
       "filename": "TestContract.tsol",
-      "line": 154
+      "line": 165
     },
     "16": {
       "filename": "TestContract.tsol",
-      "line": 155
+      "line": 166
     },
     "24": {
       "filename": "TestContract.tsol",
-      "line": 155
+      "line": 166
     },
     "40": {
       "filename": "TestContract.tsol",
-      "line": 156
+      "line": 167
     },
     "48": {
       "filename": "TestContract.tsol",
-      "line": 156
+      "line": 167
     },
     "64": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "72": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "80": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "88": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "96": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "112": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "120": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "280": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "288": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "296": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "304": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "320": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "336": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "344": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "352": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "360": {
       "filename": "TestContract.tsol",
-      "line": 157
+      "line": 168
     },
     "376": {
       "filename": "TestContract.tsol",
-      "line": 158
+      "line": 169
     },
     "392": {
       "filename": "TestContract.tsol",
-      "line": 158
+      "line": 169
     },
     "408": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "416": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "432": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "440": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "448": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "464": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "480": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "488": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "496": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "512": {
       "filename": "TestContract.tsol",
-      "line": 159
+      "line": 170
     },
     "520": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "528": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "544": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "552": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "560": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "568": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "576": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "584": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "592": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "600": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "608": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "624": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "632": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "648": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "656": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "664": {
       "filename": "TestContract.tsol",
-      "line": 160
+      "line": 171
     },
     "680": {
       "filename": "./TestContract.code",
@@ -2254,27 +2282,27 @@
     },
     "688": {
       "filename": "TestContract.tsol",
-      "line": 162
+      "line": 173
     },
     "704": {
       "filename": "TestContract.tsol",
-      "line": 162
+      "line": 173
     },
     "712": {
       "filename": "TestContract.tsol",
-      "line": 163
+      "line": 174
     },
     "720": {
       "filename": "TestContract.tsol",
-      "line": 163
+      "line": 174
     },
     "728": {
       "filename": "TestContract.tsol",
-      "line": 163
+      "line": 174
     },
     "736": {
       "filename": "TestContract.tsol",
-      "line": 163
+      "line": 174
     },
     "744": {
       "filename": "./TestContract.code",
@@ -2282,7 +2310,7 @@
     },
     "752": {
       "filename": "TestContract.tsol",
-      "line": 154
+      "line": 165
     },
     "760": {
       "filename": "./TestContract.code",
@@ -2293,202 +2321,326 @@
       "line": 896
     }
   },
-  "e19f43d0dbfc29bbed18ffe854c4a13d64ae28746c700a5a3ddf9704ac51e848": {
+  "f155b4bc8ac1e05e2a85da7b6c748efdb889228849afb24a0905e94562aceb9d": {
     "0": {
-      "filename": "<entry-selector>",
-      "line": 1
+      "filename": "TestContract.tsol",
+      "line": 183
     },
     "8": {
-      "filename": "<entry-selector>",
-      "line": 2
+      "filename": "TestContract.tsol",
+      "line": 183
+    },
+    "16": {
+      "filename": "TestContract.tsol",
+      "line": 184
     },
     "24": {
-      "filename": "<entry-selector>",
-      "line": 3
+      "filename": "TestContract.tsol",
+      "line": 184
     },
-    "32": {
-      "filename": "<entry-selector>",
-      "line": 4
+    "40": {
+      "filename": "TestContract.tsol",
+      "line": 185
     },
     "48": {
-      "filename": "<entry-selector>",
-      "line": 5
+      "filename": "TestContract.tsol",
+      "line": 185
     },
     "56": {
-      "filename": "<entry-selector>",
-      "line": 6
+      "filename": "TestContract.tsol",
+      "line": 185
+    },
+    "64": {
+      "filename": "TestContract.tsol",
+      "line": 186
     },
     "72": {
-      "filename": "<entry-selector>",
-      "line": 7
+      "filename": "TestContract.tsol",
+      "line": 186
     },
     "88": {
-      "filename": "<entry-selector>",
-      "line": 8
+      "filename": "TestContract.tsol",
+      "line": 188
     },
     "96": {
-      "filename": "<entry-selector>",
-      "line": 9
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "104": {
+      "filename": "TestContract.tsol",
+      "line": 188
     },
     "112": {
-      "filename": "<entry-selector>",
-      "line": 10
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "120": {
+      "filename": "TestContract.tsol",
+      "line": 188
     },
     "128": {
-      "filename": "<entry-selector>",
-      "line": 11
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "288": {
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "296": {
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "304": {
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "312": {
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "320": {
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "328": {
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "336": {
+      "filename": "TestContract.tsol",
+      "line": 188
+    },
+    "352": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "360": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "368": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "528": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "536": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "544": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "552": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "568": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "576": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "584": {
+      "filename": "TestContract.tsol",
+      "line": 189
+    },
+    "600": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    },
+    "616": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    },
+    "624": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    },
+    "784": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    },
+    "792": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    },
+    "800": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    },
+    "808": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    },
+    "816": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    },
+    "824": {
+      "filename": "TestContract.tsol",
+      "line": 191
+    },
+    "832": {
+      "filename": "TestContract.tsol",
+      "line": 191
     }
   },
-  "e2991eea4f484289030bafef5de92abb9744f6cad850b31f5926e225d910109c": {
+  "f1cecc973bf14d5ba462d41579b7f54b295d23232da3220ece71d16fcbe02a0e": {
     "0": {
       "filename": "./TestContract.code",
-      "line": 1224
+      "line": 1282
     },
     "8": {
       "filename": "./TestContract.code",
-      "line": 1225
+      "line": 1283
     },
     "56": {
       "filename": "./TestContract.code",
-      "line": 1226
+      "line": 1284
     },
     "64": {
       "filename": "./TestContract.code",
-      "line": 1227
+      "line": 1285
     },
     "80": {
       "filename": "./TestContract.code",
-      "line": 1230
+      "line": 1288
     },
     "88": {
       "filename": "./TestContract.code",
-      "line": 1231
+      "line": 1289
     },
     "136": {
       "filename": "./TestContract.code",
-      "line": 1232
+      "line": 1290
     },
     "144": {
       "filename": "./TestContract.code",
-      "line": 1233
+      "line": 1291
     },
     "160": {
       "filename": "./TestContract.code",
-      "line": 1236
+      "line": 1294
     },
     "168": {
       "filename": "./TestContract.code",
-      "line": 1237
+      "line": 1295
     },
     "216": {
       "filename": "./TestContract.code",
-      "line": 1238
+      "line": 1296
     },
     "224": {
       "filename": "./TestContract.code",
-      "line": 1239
+      "line": 1297
     }
   },
   "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
     "0": {
       "filename": "./TestContract.code",
-      "line": 1167
+      "line": 1225
     },
     "16": {
       "filename": "./TestContract.code",
-      "line": 1168
+      "line": 1226
     }
   },
   "f2b6fee906959c240bebf2ae6014f1d4be66e2dc6e03df25aa5ea29205d3e249": {
     "0": {
       "filename": "./TestContract.code",
-      "line": 1095
+      "line": 1153
     },
     "16": {
       "filename": "./TestContract.code",
-      "line": 1096
+      "line": 1154
     },
     "24": {
       "filename": "./TestContract.code",
-      "line": 1097
+      "line": 1155
     },
     "40": {
       "filename": "./TestContract.code",
-      "line": 1098
+      "line": 1156
     },
     "56": {
       "filename": "./TestContract.code",
-      "line": 1099
+      "line": 1157
     },
     "72": {
       "filename": "./TestContract.code",
-      "line": 1100
+      "line": 1158
     },
     "80": {
       "filename": "./TestContract.code",
-      "line": 1101
+      "line": 1159
     },
     "88": {
       "filename": "./TestContract.code",
-      "line": 1102
+      "line": 1160
     },
     "104": {
       "filename": "./TestContract.code",
-      "line": 1103
+      "line": 1161
     }
   },
   "f43d1da9908d184b3221e79e33e82c2cb2c783b3f51660a6ee5f2c0b47b45635": {
     "0": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
     },
     "8": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
     },
     "168": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
     },
     "176": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
     },
     "184": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
     },
     "192": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
     },
     "208": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
     },
     "216": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
     },
     "224": {
       "filename": "TestContract.tsol",
-      "line": 152
+      "line": 163
     },
     "240": {
       "filename": "TestContract.tsol",
-      "line": 154
+      "line": 165
     },
     "248": {
       "filename": "TestContract.tsol",
-      "line": 154
+      "line": 165
     },
     "256": {
       "filename": "TestContract.tsol",
-      "line": 154
+      "line": 165
     },
     "272": {
       "filename": "TestContract.tsol",
-      "line": 154
+      "line": 165
     }
   },
   "fa8ab5e5fd55ad62b1ae134a9345d1ca1350edf855460d6d7b1710a986a69c1b": {
@@ -2653,6 +2805,120 @@
     "184": {
       "filename": "stdlib.sol",
       "line": 380
+    }
+  },
+  "fcb01156104ae7b8fcb9283e1b56816ad202bfcd78ffea2f2fc8c0bb0a39cf0b": {
+    "0": {
+      "filename": "./TestContract.code",
+      "line": 20
+    },
+    "8": {
+      "filename": "./TestContract.code",
+      "line": 21
+    },
+    "24": {
+      "filename": "./TestContract.code",
+      "line": 22
+    },
+    "48": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "56": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "64": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "80": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "96": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "104": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "112": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "120": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "128": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "144": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "160": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "168": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "184": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "200": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "216": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "224": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "232": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "240": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "256": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "272": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "288": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "296": {
+      "filename": "TestContract.tsol",
+      "line": 28
+    },
+    "304": {
+      "filename": "./TestContract.code",
+      "line": 49
+    },
+    "320": {
+      "filename": "./TestContract.code",
+      "line": 52
+    },
+    "336": {
+      "filename": "./TestContract.code",
+      "line": 55
     }
   }
 }
